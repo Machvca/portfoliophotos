@@ -1,6 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import insta from "../../assets/images/insta.svg";
+import Image from "next/image";
+
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,8 +50,16 @@ function Navbar() {
           <a href="#" className="hover:text-indigo-500">
             Contact
           </a>
-          <a href="#" className="hover:text-indigo-500">
-            Instagram
+          <a
+            href="https://www.instagram.com/machvca/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src={insta}
+              alt="instagram logo"
+              className="w-8 h-8 cursor-pointer bg-slate-00 "
+            />
           </a>
         </div>
       </div>
@@ -74,7 +86,9 @@ function Navbar() {
             Contact
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/machvca/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-indigo-900"
             onClick={() => setIsOpen(false)}
           >
