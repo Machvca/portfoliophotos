@@ -10,9 +10,9 @@ import main4 from "../../assets/images/main4.jpg";
 export function Hero() {
   const heroPictures = [
     {
-      name: "My last shooting",
+      name: "Latest",
       image: main2,
-      link: "/travel", // Ruta a la página correspondiente
+      link: "/latest", // Ruta a la página correspondiente
     },
     {
       name: "Trips",
@@ -38,26 +38,26 @@ export function Hero() {
         <div className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
         <Boxes />
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center font-bold px-4 pointer-events-none text-center mx-auto">
-          <h1 className="text-3xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6]/90 to-[#fff1e6]/50">
+          <h1 className="text-3xl md:text-5xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6]/90 to-[#fff1e6]/50">
             Hi there, I&apos;m Jorge Machuca <br />
             <p className="lg:text-5xl">
               {" "}
               I&apos;m a{" "}
-              <span className="text-[#222223] drop-shadow-2xl z-20">
+              <span className="text-indigo-800 drop-shadow-2xl z-20">
                 photographer
               </span>{" "}
               based <br /> in Barcelona, Spain
             </p>
           </h1>
 
-          <p className="text-md mt-48 sm:mt-44 bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-slate-500/60 to-[#2700a8]">
+          <p className="text-lg mt-40 sm:mt-44 bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-slate-500/60 to-[#2700a8]">
             Scroll down to see my work!
           </p>
         </div>
       </div>
 
       {/* Nueva sección para las imágenes */}
-      <div className="-mt-44 w-full flex flex-col items-center mb-8">
+      <div className="-mt-52 w-full flex flex-col items-center mb-8">
         <div className="grid grid-cols-2 gap-3 px-8">
           {heroPictures.map(({ name, image, link }) => (
             <Link key={name} href={link} passHref>
