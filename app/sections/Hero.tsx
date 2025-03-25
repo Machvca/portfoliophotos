@@ -1,5 +1,7 @@
 "use client";
-import { Boxes } from "../components/ui/background-boxes";
+import { cn } from "@/lib/utils";
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import main1 from "../../assets/images/main1.jpg";
@@ -27,54 +29,65 @@ export function Hero() {
     {
       name: "Portraits",
       image: main1,
-      link: "/bastien-bonilla",
+      link: "/portraits",
     },
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-slate-200 flex flex-col items-center justify-center">
-      {/* Fondo y texto */}
-      <div className="h-screen relative w-full flex flex-col items-center justify-center -mt-48 -mb-12">
-        <div className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-        <Boxes />
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center font-bold px-4 pointer-events-none text-center mx-auto">
-          <h1 className="text-3xl md:text-5xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6]/90 to-[#fff1e6]/50">
-            Hi there, I&apos;m Jorge Machuca <br />
-            <p className="lg:text-5xl">
-              {" "}
-              I&apos;m a{" "}
-              <span className="text-indigo-800 drop-shadow-2xl z-20">
-                photographer
-              </span>{" "}
-              based <br /> in Barcelona, Spain
+    <section className="relative w-full overflow-hidden   ">
+      <div className="relative flex h-full w-full items-center justify-center bg-white dark:bg-black">
+        <div
+          className={cn(
+            "absolute inset-0",
+            "[background-size:40px_40px]",
+            "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]",
+            "dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+          )}
+        />
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-stone-100/10 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+        {/* Fondo y texto */}
+        <div className="h-screen relative w-full flex flex-col items-center justify-center -mt-48 -mb-12">
+          <div className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+
+          <div className="absolute inset-0 z-20  flex flex-col items-center justify-center font-bold px-4 pointer-events-none text-left mx-auto">
+            <h1 className="text-2xl md:text-5xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6] to-[#fff1e6]/50">
+              Hi there, I&apos;m Jorge Machuca <br />
+              <p className="lg:text-5xl">
+                {" "}
+                I&apos;m a{" "}
+                <span className=" bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-amber-200 to-amber-950/90 z-20">
+                  photographer
+                </span>{" "}
+                based <br /> in Barcelona, Spain
+              </p>
+            </h1>
+
+            <p className="text-sm md:text-xl mt-44 bg-clip-text text-transparent drop-shadow-5xl bg-gradient-to-b from-amber-950 to-amber-200">
+              Welcome to my Portfolio!
             </p>
-          </h1>
-
-          <p className="text-lg mt-40 sm:mt-44 bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-slate-500/60 to-[#2700a8]">
-            Scroll down to see my work!
-          </p>
+          </div>
         </div>
-      </div>
 
-      {/* Nueva sección para las imágenes */}
-      <div className="-mt-52 w-full flex flex-col items-center mb-8">
-        <div className="grid grid-cols-2 gap-3 px-8">
-          {heroPictures.map(({ name, image, link }) => (
-            <Link key={name} href={link} passHref>
-              <div className="group relative cursor-pointer">
-                <Image
-                  src={image}
-                  alt={name}
-                  width={550}
-                  height={400}
-                  className="rounded-md shadow-slate-900 hover:opacity-70 transition-opacity duration-300"
-                />
-                <p className="absolute inset-0 flex items-center justify-center text-center text-white text-xl bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {name}
-                </p>
-              </div>
-            </Link>
-          ))}
+        {/* Nueva sección para las imágenes */}
+        <div className="w-full flex flex-col items-center mt-4 mb-32">
+          <div className="grid grid-cols-2 gap-3 px-16 py-16">
+            {heroPictures.map(({ name, image, link }) => (
+              <Link key={name} href={link} passHref>
+                <div className="group relative cursor-pointer ">
+                  <Image
+                    src={image}
+                    alt={name}
+                    width={400}
+                    height={200}
+                    className="rounded-md shadow-slate-900 hover:opacity-70 transition-opacity duration-300"
+                  />
+                  <p className="absolute inset-0 flex items-center justify-center text-center text-white text-xl bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    {name}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
