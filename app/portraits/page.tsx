@@ -78,14 +78,14 @@ export default function BackgroundBeamsDemo() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-slate-100 relative flex flex-col items-center justify-center antialiased py-24">
+    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased py-24 ">
       {/* Background debajo */}
       <div className="absolute inset-0 z-0">
         <BackgroundBeams />
       </div>
 
       {/* Galería */}
-      <div className="relative z-10 max-w-6xl mx-auto p-4 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4">
+      <div className="relative z-10 max-w-6xl  p-4 grid grid-cols-2 gap-4  md:grid-cols-4">
         {portraitsPictures.map((portrait, index) => (
           <div
             key={index}
