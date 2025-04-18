@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${archivo.variable} antialiased font-archivo flex flex-col min-h-screen`}>
+      <body className="{`${archivo.variable} antialiased font-archivo flex flex-col min-h-screen`}">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

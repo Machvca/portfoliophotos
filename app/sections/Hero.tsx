@@ -1,7 +1,7 @@
 "use client";
-import { cn } from "@/lib/utils";
 import React from "react";
-
+import { cn } from "@/lib/utils";
+import { Spotlight } from "../components/ui/Spotlight";
 import Image from "next/image";
 import Link from "next/link";
 import main1 from "../../assets/images/main1.jpg";
@@ -17,7 +17,6 @@ export function Hero() {
       link: "/latest", 
     },
     {
-      name: "Trips",
       image: main3,
       link: "/travel",
     },
@@ -35,6 +34,10 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8">
+      <Spotlight
+        className="-top-90 left-0 md:-top-20 "
+        fill="black"
+      />
       <div
         className={cn(
           "absolute inset-0 h-full",
@@ -50,9 +53,9 @@ export function Hero() {
           <div className="absolute inset-0 w-full h-full  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none " />
 
           <div className="absolute inset-0 z-20  flex flex-col justify-center font-bold  pointer-events-none items-center text-center md:items-start md:text-left mx-auto">
-            <h1 className="text-2xl md:text-5xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6] to-[#fff1e6]/50">
+            <h1 className="text-2xl md:text-6xl bg-clip-text absolute drop-shadow-xl bg-gradient-to-b from-[#fff1e6] to-[#fff1e6]/50">
               Hi there, I&apos;m Jorge Machuca <br />
-              <p className="lg:text-5xl">
+              <p className="lg:text-6xl">
                 {" "}
                 I&apos;m a{" "}
                 <span className=" bg-clip-text text-transparent drop-shadow-2xl bg-gradient-to-b from-amber-200 to-amber-950/90 z-20">
@@ -62,7 +65,7 @@ export function Hero() {
               </p>
             </h1>
 
-            <p className="text-sm md:text-xl  mt-28 md:mt-44 bg-clip-text text-transparent drop-shadow-5xl bg-gradient-to-b from-amber-950 to-amber-200 ">
+            <p className="text-sm md:text-3xl  mt-28 md:mt-72 bg-clip-text text-transparent drop-shadow-5xl bg-gradient-to-b from-amber-950 to-amber-200 ">
               Welcome to my Portfolio!
             </p>
           </div>
