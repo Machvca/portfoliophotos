@@ -12,7 +12,7 @@
   "dependencies": {
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^10.12.16",
+    "framer-motion": "^12.0.0-alpha.1",
     "lucide-react": "^0.476.0",
     "motion": "^12.6.2",
     "next": "15.0.3",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
-    "@types/react": "^19",
+    "@types/react": "^19.1.2",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
     "eslint": "^9",

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+// import { Archivo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
 
-const archivo = Archivo({
-  display: "swap",
-  weight: "variable",
-  subsets: ["latin"],
-  variable: "--font-archivo",
-});
+// const archivo = Archivo({
+//   display: "swap",
+//   weight: "variable",
+//   subsets: ["latin"],
+//   variable: "--font-archivo",
+// });
 
 export const metadata: Metadata = {
   title: "Machuca Photography",

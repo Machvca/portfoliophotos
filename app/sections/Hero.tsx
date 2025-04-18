@@ -14,7 +14,7 @@ export function Hero() {
     {
       name: "Latest",
       image: main2,
-      link: "/latest", 
+      link: "/latest",
     },
     {
       image: main3,
@@ -34,10 +34,7 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8">
-      <Spotlight
-        className="-top-90 left-0 md:-top-20 "
-        fill="black"
-      />
+      <Spotlight className="-top-90 left-0 md:-top-20 " fill="black" />
       <div
         className={cn(
           "absolute inset-0 h-full",
@@ -79,7 +76,7 @@ export function Hero() {
                 <div className="group relative cursor-pointer ">
                   <Image
                     src={image}
-                    alt={name}
+                    alt={name!}
                     width={500}
                     height={100}
                     className="rounded-md hover:opacity-70 transition-opacity duration-400"

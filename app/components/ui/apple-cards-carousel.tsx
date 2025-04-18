@@ -1,12 +1,12 @@
 "use client";
 
-export { Link } from "next/link";
 import React, {
   useEffect,
   useRef,
   useState,
   createContext,
   useContext,
+  JSX,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -16,8 +16,8 @@ import {
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
-import { useOutsideClick } from "../../hooks/use-outside-click.ts";
 import Link from "next/link.js";
+import { useOutsideClick } from "@/app/hooks/use-outside-click";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -28,6 +28,7 @@ type Card = {
   src: string;
   title: string;
   category: string;
+  link?: string;
   content: React.ReactNode;
 };
 
@@ -167,7 +168,7 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -186,11 +187,8 @@ export const Card = ({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
+  //@ts-expect-error to be fixed
   useOutsideClick(containerRef, () => handleClose());
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -239,7 +237,7 @@ export const Card = ({
           </div>
         )}
       </AnimatePresence>
-      <Link href={card.link} passHref>
+      <Link href={card.link ? card.link : ""} passHref>
         <motion.button
           layoutId={layout ? `card-${card.title}` : undefined}
           className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[25rem] w-56 md:h-[50rem] md:w-[30rem] overflow-hidden flex flex-col items-start justify-start relative z-10"

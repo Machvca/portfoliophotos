@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Spotlight } from "../components/ui/Spotlight";
 
-
 import sh1 from "../../assets/images/sh1.webp";
 import sh2 from "../../assets/images/sh2.webp";
 import sh3 from "../../assets/images/sh3.webp";

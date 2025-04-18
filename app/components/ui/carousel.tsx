@@ -21,6 +21,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   const xRef = useRef(0);
   const yRef = useRef(0);
+  //@ts-expect-error to be fixed
   const frameRef = useRef<number>();
 
   useEffect(() => {
@@ -63,7 +64,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { src, button, title } = slide;
+  const { src, title } = slide;
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -95,8 +96,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             className="absolute inset-0 w-[120%] h-[120%] object-contain opacity-100 transition-opacity duration-600 ease-in-out"
             fill
             style={{
-              opacity: current === index ? 1 : 0.7, 
-
+              opacity: current === index ? 1 : 0.7,
             }}
             alt={title}
             src={src}

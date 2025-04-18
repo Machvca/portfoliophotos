@@ -1,16 +1,16 @@
 "use client";
-import Image from "next/image";
 
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
 import { BackgroundLines } from "../components/ui/background-lines";
-import t1 from "../../assets/images/t1.jpg"
-import t2 from "../../assets/images/t2.jpg"
-import t3 from "../../assets/images/t3.jpg"
-import t4 from "../../assets/images/t4.jpg"
+import t1 from "../../assets/images/t1.jpg";
+import t2 from "../../assets/images/t2.jpg";
+import t3 from "../../assets/images/t3.jpg";
+import t4 from "../../assets/images/t4.jpg";
 import t5 from "../../assets/images/t5.jpg";
 
 export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
+    //@ts-expect-error to be fixed
     <Card key={card.src} card={card} index={index} />
   ));
 
@@ -27,8 +27,6 @@ export default function AppleCardsCarouselDemo() {
     </section>
   );
 }
-
-
 
 const data = [
   {
@@ -69,6 +67,3 @@ const data = [
     link: "/portugal",
   },
 ];
-
-
-

@@ -1,12 +1,11 @@
 "use client";
 
-import latest1  from "../../assets/images/latest1.webp";
+import latest1 from "../../assets/images/latest1.webp";
 import latest2 from "../../assets/images/latest2.webp";
 import latest3 from "../../assets/images/latest3.webp";
 import latest4 from "../../assets/images/latest4.webp";
 import latest5 from "../../assets/images/latest5.webp";
 import latest6 from "../../assets/images/latest6.webp";
-
 
 import { Carousel } from "../components/ui/carousel";
 
@@ -15,32 +14,32 @@ export default function CarouselDemo() {
     {
       title: "",
       button: "Explore Component",
-      src: latest1,
+      src: latest1.src,
     },
     {
       title: "Urban Dreams",
       button: "Explore Component",
-      src: latest2,
+      src: latest2.src,
     },
     {
       title: "Neon Nights",
       button: "Explore Component",
-      src: latest3,
+      src: latest3.src,
     },
     {
       title: "Desert Whispers",
       button: "Explore Component",
-      src: latest4,
+      src: latest4.src,
     },
     {
       title: "Desert Whispers",
       button: "Explore Component",
-      src: latest5,
+      src: latest5.src,
     },
     {
       title: "Desert Whispers",
       button: "Explore Component",
-      src: latest6,
+      src: latest6.src,
     },
   ];
   return (
