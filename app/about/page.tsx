@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import am from "../../assets/images/am.webp";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { AuroraBackground } from "../components/ui/aurora-background"
 
 function page() {
