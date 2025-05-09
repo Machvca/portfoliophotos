@@ -103,7 +103,7 @@ export default function Navbar() {
 
         {/* Menú móvil */}
         <div
-          className={`md:hidden fixed z-50 top-0 left-0 w-full h-full bg-gradient-to-b from-stone-900 to-stone-500 flex flex-col items-center justify-center text-7xl transition-transform duration-700 ${
+          className={`md:hidden fixed z-50 top-0 left-0 w-full h-full bg-linear-to-b from-stone-900 to-stone-500 flex flex-col items-center justify-center text-7xl transition-transform duration-700 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >

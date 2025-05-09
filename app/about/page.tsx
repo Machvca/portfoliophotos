@@ -34,7 +34,7 @@ function page() {
           alt={"Photo of myself"}
           width={500}
           height={100}
-          className="rounded-md opacity-100 hover:opacity-90"
+          className="rounded-md opacity-100  mask-r-from-80% mask-b-from-70% mask-from-90% mask-to-95%"
         />
       </section>
     </AuroraBackground>
