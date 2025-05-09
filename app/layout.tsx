@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-// import { Archivo } from "next/font/google";
+import { Archivo } from "next/font/google";
 import "./globals.css";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
 
-// const archivo = Archivo({
-//   display: "swap",
-//   weight: "variable",
-//   subsets: ["latin"],
-//   variable: "--font-archivo",
-// });
+const archivo = Archivo({
+  display: "swap",
+  weight: "variable",
+  subsets: ["latin"],
+  variable: "--font-archivo",
+});
 
 export const metadata: Metadata = {
   title: "Machuca Photography",
@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="{`${archivo.variable} antialiased font-archivo flex flex-col min-h-screen`}">
+    <html lang="en" className={archivo.variable}>
+      <body className="antialiased font-archivo flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
