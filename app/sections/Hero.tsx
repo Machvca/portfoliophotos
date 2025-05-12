@@ -34,13 +34,13 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden md:px-24 mb-8 bg-terracota/60 ">
+    <section className="relative w-full overflow-hidden md:px-24 mb-8  ">
       <Spotlight className="-top-90 left-0 md:-top-50 " fill="white" />
       <div
         className={cn(
           "absolute inset-0 h-full",
-          "bg-size-[40px_40px]",
-          "bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)]"
+          "bg-size-[200px_200px]",
+          "bg-[linear-gradient(to_right,#dbdbdb_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb_1px,transparent_1px)]"
         )}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center dark:bg-transparent md:py-12 ">
@@ -53,7 +53,7 @@ export function Hero() {
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
-                I&apos;m a <span className=" text-terracota">
+                I&apos;m a <span className=" text-[#b1501f]">
                   photographer
                 </span>{" "}
                 based in Barcelona, Spain
@@ -69,15 +69,31 @@ export function Hero() {
           <div className="grid grid-cols-2 gap-3  md:py-16 ">
             {heroPictures.map(({ name, image, link }) => (
               <Link key={name} href={link} passHref>
-                <div className="group relative cursor-pointer hover:scale-105 hover:opacity-90 transition-transform duration-500">
+                <div
+                  className="
+      group relative 
+      cursor-pointer 
+      overflow-hidden rounded-2xl 
+      transform transition duration-500 
+      hover:scale-105 hover:opacity-100
+              hover:mask-t-from-99 hover:mask-b-from-99
+
+      filter drop-shadow-[0_25px_25px_#c458247f]
+    "
+                >
                   <Image
                     src={image}
-                    alt={name!}
+                    alt={name}
                     width={500}
-                    height={100}
-                    className="rounded-md shadow-2xl shadow-terracota/40 hover:opacity-40 transition-opacity duration-400"
+                    height={300}
+                    className="
+        w-full h-auto object-cover 
+        transform transition-transform duration-500 
+        group-hover:scale-125
+         
+      "
                   />
-                  <p className="absolute inset-0 flex items-center justify-center text-center bg-verde-oliva/10 text-verde-oliva text-3xl  bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <p className="absolute inset-0 flex items-center justify-center text-3xl text-slate-200  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {name}
                   </p>
                 </div>

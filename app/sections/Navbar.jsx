@@ -18,18 +18,18 @@ export default function Navbar() {
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHome className="h-4 w-4 text-verde-oliva " />,
     },
     {
       name: "About",
       link: "/about",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconUser className="h-4 w-4 text-verde-oliva " />,
     },
     {
       name: "Contact",
       link: "/contact",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconMessage className="h-4 w-4 text-verde-oliva " />
       ),
     },
   ]
@@ -49,12 +49,12 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="relative  w-full">
+      <div className="relative  w-full ">
         <FloatingNav navItems={navItems} />
       </div>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-30 text-stone-950 transition-colors duration-600 ${
+        className={`fixed top-0 left-0 right-0 z-30  text-terracota transition-colors duration-600  ${
           isScrolled
             ? "hidden"
             : "bg-transparent"
@@ -64,7 +64,7 @@ export default function Navbar() {
           {/* Logo */}
 
           <Link href="/">
-            <h1 className="text-xl hover:text-yellow-800">Machuca</h1>
+            <h1 className="text-2xl hover:text-verde-oliva">Machuca</h1>
           </Link>
 
           {/* Botón de menú hamburguesa */}
@@ -80,11 +80,11 @@ export default function Navbar() {
           </button>
 
           {/* Menú de navegación (escritorio) */}
-          <div className="hidden md:flex space-x-6 text-xl ">
-            <Link href="/about" className="hover:text-yellow-800">
+          <div className="hidden md:flex space-x-6 text-2xl ">
+            <Link href="/about" className="hover:text-verde-oliva">
               About Me
             </Link>
-            <Link href="/contact" className="hover:text-yellow-800">
+            <Link href="/contact" className="hover:text-verde-oliva">
               Contact
             </Link>
             <a
