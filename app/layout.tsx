@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./sections/Navbar";
 import Footer from "./sections/Footer";
+import {  Roboto } from "next/font/google";
+
 
 
 
@@ -10,6 +12,14 @@ export const metadata: Metadata = {
   description: "Photography Portfolio",
 };
 
+
+const roboto = Roboto({
+  display: "swap",
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="antialiased  flex flex-col min-h-screen">
+      <body
+        className={`${roboto.variable} font-roboto antialiased flex flex-col min-h-screen`}
+      >
         <Navbar />
         <main className="grow">{children}</main>
         <Footer />

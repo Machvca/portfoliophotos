@@ -8,7 +8,7 @@ import { AuroraBackground } from "../components/ui/aurora-background"
 function page() {
   return (
     <AuroraBackground>
-      <section className="mt-48 flex flex-col-2 items-center space-x-5 mx-24 z-30">
+      <section className="mt-24 flex flex-col-2 text-left items-center space-x-5 mx-24 z-30 text-background">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +19,7 @@ function page() {
           }}
         >
           <h1 className="text-4xl">ABOUT ME</h1>
-          <p className="text-lg mt-4">
+          <p className="text-lg mt-4 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, id
             quia? Ab, eligendi cupiditate minima animi, porro quaerat dolores at
             possimus necessitatibus excepturi, maiores laborum obcaecati optio.
@@ -34,7 +34,7 @@ function page() {
           alt={"Photo of myself"}
           width={500}
           height={100}
-          className="rounded-md opacity-100  mask-r-from-80% mask-b-from-70% mask-from-90% mask-to-95%"
+          className="rounded-md opacity-100 hover:scale-125  mask-r-from-80% mask-b-from-70% mask-from-90% mask-to-95%"
         />
       </section>
     </AuroraBackground>
