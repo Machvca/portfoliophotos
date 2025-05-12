@@ -1,142 +1,136 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import insta from "../../assets/images/insta.svg";
-import Image from "next/image";
 import Link from "next/link";
 import { FloatingNav } from "../components/ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-
-
-
-
-
-
+import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export default function Navbar() {
   const navItems = [
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-verde-oliva " />,
+      icon: <IconHome className="h-4 w-4 text-verde-oliva" />,
     },
     {
       name: "About",
       link: "/about",
-      icon: <IconUser className="h-4 w-4 text-verde-oliva " />,
+      icon: <IconUser className="h-4 w-4 text-verde-oliva" />,
     },
     {
       name: "Contact",
       link: "/contact",
-      icon: (
-        <IconMessage className="h-4 w-4 text-verde-oliva " />
-      ),
+      icon: <IconMessage className="h-4 w-4 text-verde-oliva" />,
     },
-  ]
+  ];
 
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detectar el scroll
+  // Detectar el scroll para ocultar el navbar
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // Cambia cuando baja más de 50px
+      setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Bloquear scroll cuando el menú móvil está abierto
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isOpen);
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
+
   return (
     <>
-      <div className="relative  w-full ">
+      <div className="relative w-full">
         <FloatingNav navItems={navItems} />
       </div>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-30  text-terracota transition-colors duration-600  ${
-          isScrolled
-            ? "hidden"
-            : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-30 text-terracota/70 transition-colors duration-600 ${
+          isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
-        <div className="container mx-24  py-4 flex justify-between items-center">
-          {/* Logo */}
-
+        <div className="container mx-24 py-4 flex justify-between items-center">
           <Link href="/">
             <h1 className="text-2xl hover:text-verde-oliva">Machuca</h1>
           </Link>
 
-          {/* Botón de menú hamburguesa */}
+          {/* Botón hamburguesa / X */}
           <button
-            className="md:hidden z-30 fixed top-4 right-4"
-            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden fixed top-4 right-4 z-50"
+            onClick={() => setIsOpen((prev) => !prev)}
           >
-            {isOpen ? (
-              <X size={30} className="text-stone-300" />
-            ) : (
-              <Menu size={30} />
-            )}
+            {isOpen ? <X size={30} className="" /> : <Menu size={30} />}
           </button>
 
-          {/* Menú de navegación (escritorio) */}
-          <div className="hidden md:flex space-x-6 text-2xl ">
-            <Link href="/about" className="hover:text-verde-oliva">
+          {/* Menú de escritorio */}
+          <div className="hidden md:flex space-x-6 text-2xl">
+            <Link
+              href="/about"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva"
+            >
               About Me
             </Link>
-            <Link href="/contact" className="hover:text-verde-oliva">
+            <Link
+              href="/contact"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva"
+            >
               Contact
             </Link>
             <a
               href="https://www.instagram.com/machvca/"
               target="_blank"
               rel="noopener noreferrer"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva"
             >
-              <Image
-                src={insta}
-                alt="instagram logo"
-                className="w-8 h-8 cursor-pointer items-center justify-center"
-              />
+              Instagram
             </a>
           </div>
         </div>
 
         {/* Menú móvil */}
         <div
-          className={`md:hidden fixed z-50 top-0 left-0 w-full h-full bg-linear-to-b from-stone-900 to-stone-500 flex flex-col items-center justify-center text-7xl transition-transform duration-700 ${
+          className={`md:hidden fixed top-0 left-0 w-full h-full  flex flex-col items-center justify-center text-7xl transition-transform duration-700 z-40 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
-          <div className="flex flex-col items-center justify-center gap-6 text-8xl sm:px-24 text-stone-300">
-            <Link
-              href="/about"
-              className="hover:text-stone-950"
-              onClick={() => setIsOpen(false)}
-            >
-              About Me
-            </Link>
-            <a
-              href="#"
-              className="hover:text-stone-950"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </a>
-            <a
-              href="https://www.instagram.com/machvca/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-stone-950"
-              onClick={() => setIsOpen(false)}
-            >
-              Instagram
-            </a>
-          </div>
+          {/* Animación de fondo sin interceptar clicks */}
+          <BackgroundGradientAnimation>
+            {/* Enlaces centrados y clicables */}
+            <div className="relative mt-96  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+              <Link
+                href="/about"
+                className="pointer-events-auto hover:text-terracota"
+                onClick={() => setIsOpen(false)}
+              >
+                About Me
+              </Link>
+              <Link
+                href="/contact"
+                className="pointer-events-auto hover:text-terracota"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+              <a
+                href="https://www.instagram.com/machvca/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pointer-events-auto hover:text-terracota"
+                onClick={() => setIsOpen(false)}
+              >
+                Instagram
+              </a>
+            </div>
+          </BackgroundGradientAnimation>
         </div>
       </nav>
     </>
   );
-
 }
-
-

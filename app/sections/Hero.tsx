@@ -8,6 +8,7 @@ import main1 from "../../assets/images/main1.jpg";
 import main2 from "../../assets/images/main2.jpg";
 import main3 from "../../assets/images/main3.jpg";
 import main4 from "../../assets/images/main4.jpg";
+import { ContainerTextFlip } from "../components/ui/container-text-flip";
 
 export function Hero() {
   const heroPictures = [
@@ -35,7 +36,7 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8  ">
-      <Spotlight className="-top-90 left-0 md:-top-50 " fill="white" />
+      <Spotlight className="-top-40 left-0 md:-top-50 " fill="#b1501f" />
       <div
         className={cn(
           "absolute inset-0 h-full",
@@ -43,19 +44,19 @@ export function Hero() {
           "bg-[linear-gradient(to_right,#dbdbdb_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb_1px,transparent_1px)]"
         )}
       />
-      <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center dark:bg-transparent md:py-12 ">
+      <div className="relative grid grid-cols-1 mt-4 md:grid-cols-2 h-full w-full items-center justify-center dark:bg-transparent md:py-12 ">
         {/* Fondo y texto */}
         <div className="min-h-[50vh] relative w-full  justify-center md:-mt-96 ">
           <div className="absolute inset-0 w-full h-full  z-10 mask-[radial-gradient(transparent,white)] pointer-events-none " />
 
-          <div className="grid  z-20 font-mono font-bold text-6xl pointer-events-none md:items-start text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-950 via-verde-oliva/ ">
+          <div className="grid mb-32 md:mb-0 md:mt-48 mt-24 z-20 font-mono font-bold text-xl md:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-900">
             <h1 className=" ">
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
-                I&apos;m a <span className=" text-[#b1501f]">
-                  photographer
-                </span>{" "}
+                I&apos;m a <br /> 
+                <ContainerTextFlip /> {""}
+                
                 based in Barcelona, Spain
               </span>
             </h1>
@@ -93,7 +94,7 @@ export function Hero() {
          
       "
                   />
-                  <p className="absolute inset-0 flex items-center justify-center text-3xl text-slate-200  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="absolute inset-0 flex items-center justify-center text-3xl text-stone-950 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {name}
                   </p>
                 </div>
