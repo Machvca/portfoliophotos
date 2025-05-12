@@ -52,7 +52,7 @@ export default function Navbar() {
       </div>
 
       <nav
-        className={`fixed top-0 left-0 right-0 z-30 text-terracota/70 transition-colors duration-600 ${
+        className={`fixed top-0 left-0 right-0 z-50 text-terracota/70 transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
@@ -63,10 +63,10 @@ export default function Navbar() {
 
           {/* Botón hamburguesa / X */}
           <button
-            className="md:hidden fixed top-4 right-4 z-50"
+            className="md:hidden fixed top-4 right-4 z-70"
             onClick={() => setIsOpen((prev) => !prev)}
           >
-            {isOpen ? <X size={30} className="" /> : <Menu size={30} />}
+            {isOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
 
           {/* Menú de escritorio */}
@@ -96,14 +96,14 @@ export default function Navbar() {
 
         {/* Menú móvil */}
         <div
-          className={`md:hidden fixed top-0 left-0 w-full h-full  flex flex-col items-center justify-center text-7xl transition-transform duration-700 z-40 ${
+          className={`md:hidden fixed top-0 left-0 w-full h-full  flex flex-col items-center justify-center text-7xl transition-transform duration-700 z-60 ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           {/* Animación de fondo sin interceptar clicks */}
           <BackgroundGradientAnimation>
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-96  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-80  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
                 className="pointer-events-auto hover:text-terracota"
