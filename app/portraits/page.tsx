@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+
 import { BackgroundBeams } from "../components/ui/background-beams";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -44,6 +45,40 @@ export default function BackgroundBeamsDemo() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
+  // Función para ir a la imagen anterior
+  // const goToPreviousImage = () => {
+  //   if (currentIndex !== null && currentIndex > 0) {
+  //     setSelectedImage(portraitsPictures[currentIndex - 1].image.src);
+  //     setCurrentIndex(currentIndex - 1);
+  //   }
+  // };
+  const goToPreviousImage = useCallback(() => {
+    if (currentIndex !== null && currentIndex > 0) {
+      setSelectedImage(portraitsPictures[currentIndex - 1].image.src);
+      setCurrentIndex(currentIndex - 1);
+    }
+  }, [currentIndex]);
+
+  // Función para ir a la imagen siguiente
+  // const goToNextImage = () => {
+  //   if (currentIndex !== null && currentIndex < portraitsPictures.length - 1) {
+  //     setSelectedImage(portraitsPictures[currentIndex + 1].image.src);
+  //     setCurrentIndex(currentIndex + 1);
+  //   }
+  // };
+
+  const goToNextImage = useCallback(() => {
+    if (currentIndex !== null && currentIndex < portraitsPictures.length - 1) {
+      setSelectedImage(portraitsPictures[currentIndex + 1].image.src);
+      setCurrentIndex(currentIndex + 1);
+    }
+  }, [currentIndex]);
+  // Función para seleccionar la imagen al hacer click
+  const selectImage = (index: number) => {
+    setSelectedImage(portraitsPictures[index].image.src);
+    setCurrentIndex(index);
+  };
+
   // Cerrar con tecla Escape
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -53,29 +88,7 @@ export default function BackgroundBeamsDemo() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex]);
-
-  // Función para ir a la imagen anterior
-  const goToPreviousImage = () => {
-    if (currentIndex !== null && currentIndex > 0) {
-      setSelectedImage(portraitsPictures[currentIndex - 1].image.src);
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  // Función para ir a la imagen siguiente
-  const goToNextImage = () => {
-    if (currentIndex !== null && currentIndex < portraitsPictures.length - 1) {
-      setSelectedImage(portraitsPictures[currentIndex + 1].image.src);
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  // Función para seleccionar la imagen al hacer click
-  const selectImage = (index: number) => {
-    setSelectedImage(portraitsPictures[index].image.src);
-    setCurrentIndex(index);
-  };
+  }, [goToNextImage, goToPreviousImage]);
 
   return (
     <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased py-24 ">

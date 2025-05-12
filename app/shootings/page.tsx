@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../lib/utils";
@@ -44,7 +45,46 @@ export default function BackgroundBeamsDemo() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
+  // // Función para ir a la imagen anterior
+  // const goToPreviousImage = () => {
+  //   if (currentIndex !== null && currentIndex > 0) {
+  //     setSelectedImage(shootingPictures[currentIndex - 1].image.src);
+  //     setCurrentIndex(currentIndex - 1);
+  //   }
+  // };
+
+  // // Función para ir a la imagen siguiente
+  // const goToNextImage = () => {
+  //   if (currentIndex !== null && currentIndex < shootingPictures.length - 1) {
+  //     setSelectedImage(shootingPictures[currentIndex + 1].image.src);
+  //     setCurrentIndex(currentIndex + 1);
+  //   }
+  // };
+
+  const goToPreviousImage = useCallback(() => {
+    if (currentIndex !== null && currentIndex > 0) {
+      setSelectedImage(shootingPictures[currentIndex - 1].image.src);
+      setCurrentIndex(currentIndex - 1);
+    }
+  }, [currentIndex]);
+
+  const goToNextImage = useCallback(() => {
+    if (currentIndex !== null && currentIndex < shootingPictures.length - 1) {
+      setSelectedImage(shootingPictures[currentIndex + 1].image.src);
+      setCurrentIndex(currentIndex + 1);
+    }
+  }, [currentIndex]);
+
   // Cerrar con tecla Escape
+  // useEffect(() => {
+  //   const handleKeyDown = (e: KeyboardEvent) => {
+  //     if (e.key === "Escape") setSelectedImage(null);
+  //     if (e.key === "ArrowLeft") goToPreviousImage();
+  //     if (e.key === "ArrowRight") goToNextImage();
+  //   };
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   return () => window.removeEventListener("keydown", handleKeyDown);
+  // }, [currentIndex]);
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedImage(null);
@@ -53,23 +93,7 @@ export default function BackgroundBeamsDemo() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex]);
-
-  // Función para ir a la imagen anterior
-  const goToPreviousImage = () => {
-    if (currentIndex !== null && currentIndex > 0) {
-      setSelectedImage(shootingPictures[currentIndex - 1].image.src);
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  // Función para ir a la imagen siguiente
-  const goToNextImage = () => {
-    if (currentIndex !== null && currentIndex < shootingPictures.length - 1) {
-      setSelectedImage(shootingPictures[currentIndex + 1].image.src);
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
+  }, [goToNextImage, goToPreviousImage]);
 
   // Función para seleccionar la imagen al hacer click
   const selectImage = (index: number) => {
