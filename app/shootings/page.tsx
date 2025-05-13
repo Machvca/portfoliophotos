@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../lib/utils";
-import { Spotlight } from "../components/ui/Spotlight";
+
 
 import sh1 from "../../assets/images/sh1.webp";
 import sh2 from "../../assets/images/sh2.webp";
@@ -79,18 +79,15 @@ export default function BackgroundBeamsDemo() {
   };
 
   return (
-    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased py-24 ">
+    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased md:py-40 ">
       {/* Background debajo */}
       <div className="absolute inset-0 z-0"></div>
       <div
         className={cn(
           "pointer-events-none absolute inset-0 bg-size-[180px_180px] select-none",
-          "bg-[linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
+          "bg-[linear-gradient(to_right,#d0d0d0_1px,transparent_1px),linear-gradient(to_bottom,#d0d0d0_1px,transparent_1px)]"
         )}
       />
-
-      <Spotlight className="-top-40 md:-top-20 md:-left-60" fill="black" />
-      <Spotlight className="-top-40  md:-top-20 md:right-60" fill="brown" />
 
       {/* Galería */}
       <div className="relative z-10 max-w-6xl  p-4 grid grid-cols-2 gap-4  md:grid-cols-4">
