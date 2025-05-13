@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
-
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../../lib/utils";
@@ -79,7 +78,7 @@ export default function BackgroundBeamsDemo() {
   };
 
   return (
-    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased md:py-40 ">
+    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased py-20 md:py-40 ">
       {/* Background debajo */}
       <div className="absolute inset-0 z-0"></div>
       <div
@@ -101,6 +100,7 @@ export default function BackgroundBeamsDemo() {
               src={portrait.image}
               alt={portrait.name}
               className="w-full h-auto object-cover transition-transform duration-300 hover:scale-130"
+              priority={index === 0} // 👈 AQUI VA LA SOLUCIÓN
             />
           </div>
         ))}
@@ -129,6 +129,7 @@ export default function BackgroundBeamsDemo() {
                 width={1200}
                 height={1200}
                 className="max-w-full max-h-screen object-contain"
+                // priority={index === 0}
               />
             </motion.div>
 

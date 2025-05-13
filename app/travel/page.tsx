@@ -45,20 +45,20 @@ const data = [
     category: "Mexico",
     title: "Tulum",
     src: t3,
-    link: "/mexico",
+    link: "/tulum",
   },
 
   {
     category: "Denmark",
     title: "Copenhague",
     src: t4,
-    link: "/denmark",
+    link: "/copen",
   },
   {
     category: "Spain",
     title: "Barcelona",
     src: t5,
-    link: "/spain",
+    link: "/barcelona",
   },
  
 ];

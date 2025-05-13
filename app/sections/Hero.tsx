@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { cn } from "../../lib/utils";
-import { Spotlight } from "../components/ui/Spotlight";
+
 import Image from "next/image";
 import Link from "next/link";
 import main1 from "../../assets/images/main1.jpg";
@@ -9,6 +9,7 @@ import main2 from "../../assets/images/main2.jpg";
 import main3 from "../../assets/images/main3.jpg";
 import main4 from "../../assets/images/main4.jpg";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
+import { Spotlight } from "../components/ui/spothlight-new.tsx";
 
 export function Hero() {
   const heroPictures = [
@@ -36,7 +37,8 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8 ">
-      <Spotlight className="-top-40 left-0 md:-top-10 " fill="#b1501f" />
+      {/* <Spotlight className="-top-40 left-0 md:-top-10 " fill="#b1501f" /> */}
+      <Spotlight  />
       <div
         className={cn(
           "absolute inset-0 h-full",

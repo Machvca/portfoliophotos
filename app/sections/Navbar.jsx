@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
@@ -48,13 +47,13 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 text-terracota/70 transition-colors duration-600 ${
+        className={`fixed text-2xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
         <div className="container mx-24 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className="text-2xl hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
+            <h1 className="hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
               Machuca
             </h1>
           </Link>
@@ -68,7 +67,7 @@ export default function Navbar() {
           </button>
 
           {/* Menú de escritorio */}
-          <div className="hidden md:flex space-x-6 text-2xl">
+          <div className="hidden md:flex space-x-6 ">
             <Link
               href="/about"
               className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"

@@ -70,7 +70,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="perspective-distant transform-3d">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[-2vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[60vmin] h-[60vmin] mx-[-2vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -93,16 +93,14 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <Image
-            className="absolute inset-0 w-[120%] h-[120%] object-contain opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 object-contain transition-opacity duration-600 ease-in-out"
             fill
-            style={{
-              opacity: current === index ? 1 : 0.7,
-            }}
             alt={title}
             src={src}
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
+            priority={index === 0}
           />
           {current === index && (
             <div className="absolute inset-0  transition-all duration-2000" />
