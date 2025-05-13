@@ -51,12 +51,12 @@ export function Hero() {
         <div className="min-h-[50vh] relative w-full  justify-center md:-mt-96 ">
           <div className="absolute inset-0 w-full h-full  z-10 mask-[radial-gradient(transparent,white)] pointer-events-none " />
 
-          <div className="grid mb-32 md:mb-0 md:mt-48 mt-24 z-20 font-mono font-bold text-2xl md:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-900">
+          <div className="grid mb-32 md:mb-0 md:mt-48 mt-28 z-20 font-mono font-bold text-2xl md:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-900">
             <h1 className=" ">
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
-                I&apos;m a <br />
+                I&apos;m a <br /> 
                 <ContainerTextFlip /> {""}
                 based in Barcelona, Spain
               </span>
@@ -67,7 +67,7 @@ export function Hero() {
         </div>
 
         {/* Nueva sección para las imágenes */}
-        <div className="w-full grid grid-cols -mt-36 md:mt-4 md:mb-32 px-6 ">
+        <div className="w-full grid grid-cols -mt-52 md:mt-4 md:mb-32 px-6 ">
           <div className="grid md:grid-cols-2 gap-8 md:gap-3  md:py-16 mx-8 md:mx-0 pb-16">
             {heroPictures.map(({ name, image, link }) => (
               <Link key={name} href={link} passHref>

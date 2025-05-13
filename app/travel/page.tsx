@@ -15,10 +15,10 @@ export default function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <section className="bg-transparent font-mono">
-      <BackgroundLines className="flex items-center justify-center w-full flex-col -ml-24 px-4 bg-transparent">
-        <div className="w-full h-full py-20 mt-24">
-          <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-terracota dark:text z-70 ">
+    <section className="bg-transparent font-mono px-4">
+      <BackgroundLines className="flex items-center justify-center w-full flex-col  px-4 bg-transparent">
+        <div className="w-full h-full py-20 mt-24 ">
+          <h2 className="max-w-xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-terracota  ">
             Some of the photos from my last trips
           </h2>
           <Carousel items={cards} />
