@@ -138,18 +138,18 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         </div>
         <div className="flex justify-end gap-2 mr-10">
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 h-10 w-10 rounded-full bg-terracota/10 flex items-center justify-center disabled:opacity-40"
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowLeft className="h-6 w-6 text-terracota" />
           </button>
           <button
-            className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
+            className="relative z-40 h-10 w-10 rounded-full bg-terracota/10 flex items-center justify-center disabled:opacity-50"
             onClick={scrollRight}
             disabled={!canScrollRight}
           >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+            <IconArrowNarrowRight className="h-6 w-6 text-terracota" />
           </button>
         </div>
       </div>
@@ -214,7 +214,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-60 my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-black dark:bg-neutral-900 h-fit  z-60 my-10 p-4 md:p-10 rounded-3xl font-sans relative"
             >
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
@@ -224,13 +224,13 @@ export const Card = ({
               </button>
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-base font-medium text-terracota dark:text-terracota"
               >
                 {card.category}
               </motion.p>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
+                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-terracota"
               >
                 {card.title}
               </motion.p>
@@ -244,17 +244,17 @@ export const Card = ({
           layoutId={layout ? `card-${card.title}` : undefined}
           className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-100 w-56 md:h-200 md:w-120 overflow-hidden flex flex-col items-start justify-start relative z-10"
         >
-          <div className="absolute h-full top-0 inset-x-0 bg-linear-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-          <div className="relative z-40 p-8">
+          <div className="absolute h-full top-0 inset-x-0 bg-linear-to-b from-terracota/20 via-transparent to-transparent z-30 pointer-events-auto" />
+          <div className="relative z-40 p-8 ">
             <motion.p
               layoutId={layout ? `category-${card.category}` : undefined}
-              className="text-white text-sm md:text-base font-medium font-archivo text-left"
+              className="text-terracota text-sm md:text-base font-medium  text-left"
             >
               {card.category}
             </motion.p>
             <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
-              className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left text-balance font-archivo mt-2"
+              className="text-terracota/90 text-xl md:text-3xl font-semibold max-w-xs text-left text-balance mt-2"
             >
               {card.title}
             </motion.p>

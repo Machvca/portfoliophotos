@@ -45,21 +45,7 @@ export default function BackgroundBeamsDemo() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
-  // // Función para ir a la imagen anterior
-  // const goToPreviousImage = () => {
-  //   if (currentIndex !== null && currentIndex > 0) {
-  //     setSelectedImage(shootingPictures[currentIndex - 1].image.src);
-  //     setCurrentIndex(currentIndex - 1);
-  //   }
-  // };
 
-  // // Función para ir a la imagen siguiente
-  // const goToNextImage = () => {
-  //   if (currentIndex !== null && currentIndex < shootingPictures.length - 1) {
-  //     setSelectedImage(shootingPictures[currentIndex + 1].image.src);
-  //     setCurrentIndex(currentIndex + 1);
-  //   }
-  // };
 
   const goToPreviousImage = useCallback(() => {
     if (currentIndex !== null && currentIndex > 0) {
@@ -75,16 +61,7 @@ export default function BackgroundBeamsDemo() {
     }
   }, [currentIndex]);
 
-  // Cerrar con tecla Escape
-  // useEffect(() => {
-  //   const handleKeyDown = (e: KeyboardEvent) => {
-  //     if (e.key === "Escape") setSelectedImage(null);
-  //     if (e.key === "ArrowLeft") goToPreviousImage();
-  //     if (e.key === "ArrowRight") goToNextImage();
-  //   };
-  //   window.addEventListener("keydown", handleKeyDown);
-  //   return () => window.removeEventListener("keydown", handleKeyDown);
-  // }, [currentIndex]);
+  
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedImage(null);
@@ -107,7 +84,7 @@ export default function BackgroundBeamsDemo() {
       <div className="absolute inset-0 z-0"></div>
       <div
         className={cn(
-          "pointer-events-none absolute inset-0 bg-size-[40px_40px] select-none",
+          "pointer-events-none absolute inset-0 bg-size-[180px_180px] select-none",
           "bg-[linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
         )}
       />
@@ -121,12 +98,12 @@ export default function BackgroundBeamsDemo() {
           <div
             key={index}
             onClick={() => selectImage(index)}
-            className="relative overflow-hidden rounded-xl cursor-pointer transition-transform duration-300 hover:scale-130"
+            className="relative overflow-hidden rounded-xl cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             <Image
               src={portrait.image}
               alt={portrait.name}
-              className="w-full h-auto object-cover transition-transform duration-300 hover:scale-110"
+              className="w-full h-auto object-cover transition-transform duration-300 hover:scale-130"
             />
           </div>
         ))}

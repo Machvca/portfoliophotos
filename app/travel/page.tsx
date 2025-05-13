@@ -15,10 +15,10 @@ export default function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <section className="bg-transparent">
+    <section className="bg-transparent font-mono">
       <BackgroundLines className="flex items-center justify-center w-full flex-col -ml-24 px-4 bg-transparent">
         <div className="w-full h-full py-20 mt-24">
-          <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+          <h2 className="max-w-7xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-terracota dark:text z-70 ">
             Some of the photos from my last trips
           </h2>
           <Carousel items={cards} />
@@ -60,10 +60,5 @@ const data = [
     src: t5,
     link: "/spain",
   },
-  {
-    category: "Portugal",
-    title: "Portugal",
-    src: t5,
-    link: "/portugal",
-  },
+ 
 ];

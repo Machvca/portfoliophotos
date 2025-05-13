@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { FloatingNav } from "../components/ui/floating-navbar";
+
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
@@ -47,10 +47,6 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="relative w-full">
-        <FloatingNav navItems={navItems} />
-      </div>
-
       <nav
         className={`fixed top-0 left-0 right-0 z-50 text-terracota/70 transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
@@ -58,7 +54,9 @@ export default function Navbar() {
       >
         <div className="container mx-24 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className="text-2xl hover:text-verde-oliva">Machuca</h1>
+            <h1 className="text-2xl hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
+              Machuca
+            </h1>
           </Link>
 
           {/* Botón hamburguesa / X */}
@@ -73,13 +71,13 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-6 text-2xl">
             <Link
               href="/about"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
             >
               About Me
             </Link>
             <Link
               href="/contact"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
             >
               Contact
             </Link>
@@ -87,7 +85,7 @@ export default function Navbar() {
               href="https://www.instagram.com/machvca/"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
             >
               Instagram
             </a>
@@ -103,7 +101,7 @@ export default function Navbar() {
           {/* Animación de fondo sin interceptar clicks */}
           <BackgroundGradientAnimation>
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-80  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-64 text-stone-900  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
                 className="pointer-events-auto hover:text-terracota"

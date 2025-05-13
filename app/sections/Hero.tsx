@@ -35,8 +35,8 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden md:px-24 mb-8  ">
-      <Spotlight className="-top-40 left-0 md:-top-50 " fill="#b1501f" />
+    <section className="relative w-full overflow-hidden md:px-24 mb-8 ">
+      <Spotlight className="-top-40 left-0 md:-top-10 " fill="#b1501f" />
       <div
         className={cn(
           "absolute inset-0 h-full",
@@ -44,7 +44,7 @@ export function Hero() {
           "bg-[linear-gradient(to_right,#dbdbdb_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb_1px,transparent_1px)]"
         )}
       />
-      <div className="relative grid grid-cols-1 mt-4 md:grid-cols-2 h-full w-full items-center justify-center dark:bg-transparent md:py-12 ">
+      <div className="relative grid grid-cols-1 mt-4 md:grid-cols-2 h-full w-full items-center justify-center md:py-12 ">
         {/* Fondo y texto */}
         <div className="min-h-[50vh] relative w-full  justify-center md:-mt-96 ">
           <div className="absolute inset-0 w-full h-full  z-10 mask-[radial-gradient(transparent,white)] pointer-events-none " />
@@ -54,9 +54,8 @@ export function Hero() {
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
-                I&apos;m a <br /> 
+                I&apos;m a <br />
                 <ContainerTextFlip /> {""}
-                
                 based in Barcelona, Spain
               </span>
             </h1>
