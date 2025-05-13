@@ -53,7 +53,7 @@ export default function Navbar() {
       >
         <div className="container mx-24 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className="hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
+            <h1 className="hidden md:block hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
               Machuca
             </h1>
           </Link>
@@ -98,9 +98,11 @@ export default function Navbar() {
           }`}
         >
           {/* Animación de fondo sin interceptar clicks */}
-          <BackgroundGradientAnimation>
+          <BackgroundGradientAnimation
+            className={`${isOpen ? "" : "pointer-events-none"}`}
+          >
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-64 text-stone-900  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-64 text-stone-200  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
                 className="pointer-events-auto hover:text-terracota"
@@ -114,6 +116,13 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Contact
+              </Link>
+              <Link
+                href="/"
+                className="pointer-events-auto hover:text-terracota"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
               </Link>
               <a
                 href="https://www.instagram.com/machvca/"

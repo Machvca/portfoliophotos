@@ -39,7 +39,7 @@ export default function ContactPage() {
     });
 
     if (response.status === 200) {
-      showToast.success("toastSuccess", {
+      showToast.success("Email sent successfully!", {
         duration: 4000,
         progress: true,
         position: "top-right",
@@ -49,7 +49,7 @@ export default function ContactPage() {
       formRef.current?.reset();
       setFormData({ email: "", subject: "", message: "" });
     } else {
-        showToast.error("toastError", {
+        showToast.error("Error sending email. Please try again.", {
           duration: 4000,
           progress: true,
           position: "top-right",
@@ -61,13 +61,12 @@ export default function ContactPage() {
 
   return (
     <main className="bg-gradient-to-br from-terracota via-terracota/10 to-terracota/80 min-h-screen flex flex-col">
-
-      <section className="flex flex-col items-center justify-center px-4 py-32 md:px-8 font-rubik animate-fade-in-up">
+      <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
         <div className="w-full max-w-2xl bg-[#feefef] rounded-2xl shadow-xl p-8 border border-gray-100">
-          <h2 className="text-7xl font-medium mb-6 text-terracota text-center font-syne">
+          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center font-syne">
             Contact Me
           </h2>
-          <p className="text-stone-700 text-base mb-8 text-center font-rubik">
+          <p className="text-stone-950 text-xs md:text-base mb-8 text-center ">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
             quas aliquam fugit libero eveniet vitae temporibus delectus
             architecto iure, porro inventore beatae nemo a, cumque, voluptatum
@@ -78,17 +77,17 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block mb-2 text-base font-medium text-stone-900"
+                className="block mb-2 text-xs md:text-base font-medium text-stone-900"
               >
-              email
+                Your Email
               </label>
               <input
                 name="email"
                 type="email"
                 id="email"
                 required
-                placeholder="placeholderEmail"
-                className="w-full p-4 text-base text-stone-900 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-900"
+                placeholder="youremail@example.com"
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-950"
                 onChange={handleInputChange}
               />
             </div>
@@ -96,17 +95,17 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="subject"
-                className="block mb-2 text-base font-medium text-stone-900"
+                className="block mb-2 text-xs md:text-base font-medium text-stone-950"
               >
-                holiiifafdsnoikdasnad
+                Subject
               </label>
               <input
                 name="subject"
                 type="text"
                 id="subject"
                 required
-                placeholder="placeholderSubject"
-                className="w-full p-4 text-base text-stone-900 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-900"
+                placeholder="Portraits, corporate event, etc."
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-950"
                 onChange={handleInputChange}
               />
             </div>
@@ -114,17 +113,17 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="message"
-                className="block mb-2 text-base font-medium text-stone-900"
+                className="block mb-2 text-xs md:text-base font-medium text-stone-950"
               >
-              tu mensaje
+                Message
               </label>
               <textarea
                 name="message"
                 id="message"
                 rows={6}
                 required
-                placeholder="placeholderMessage"
-                className="w-full p-4 text-base text-stone-900 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-900"
+                placeholder="Tell me about your event and preferred date/time..."
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-900"
                 onChange={handleInputChange}
               />
             </div>
@@ -160,12 +159,11 @@ export default function ContactPage() {
                   />
                 </svg>
               ) : null}
-              {loading ? "buttonSending" : "buttonSubmit"}
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
       </section>
-
     </main>
   );
 }

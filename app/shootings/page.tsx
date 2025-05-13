@@ -78,7 +78,7 @@ export default function BackgroundBeamsDemo() {
   };
 
   return (
-    <div className="w-full min-h-screen  relative flex flex-col items-center justify-center antialiased py-20 md:py-40 ">
+    <div className="w-full min-h-screen relative flex flex-col items-center justify-center antialiased py-20 md:py-40 ">
       {/* Background debajo */}
       <div className="absolute inset-0 z-0"></div>
       <div
@@ -89,7 +89,7 @@ export default function BackgroundBeamsDemo() {
       />
 
       {/* Galería */}
-      <div className="relative z-10 max-w-6xl  p-4 grid grid-cols-2 gap-4  md:grid-cols-4">
+      <div className="relative z-10 max-w-6xl  p-4 grid grid-cols-2 gap-4  md:grid-cols-3">
         {shootingPictures.map((portrait, index) => (
           <div
             key={index}
