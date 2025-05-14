@@ -70,7 +70,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="perspective-distant transform-3d">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[60vmin] h-[60vmin] mx-[-2vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center  opacity-100 transition-all duration-300 ease-in-out w-[80vmin] h-[90vmin] md:w-[60vmin] md:h-[60vmin] mx-[-8vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -93,7 +93,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <Image
-            className="absolute inset-0 object-contain transition-opacity duration-600 ease-in-out"
+            className="absolute rounded-2xl inset-0 object-contain transition-opacity duration-600 ease-in-out"
             fill
             alt={title}
             src={src}
@@ -197,7 +197,7 @@ export function Carousel({ slides }: CarouselProps) {
         ))}
       </ul>
 
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full mt-20 top-[calc(100%+1rem)]">
         <CarouselControl
           type="previous"
           title="Go to previous slide"

@@ -38,7 +38,7 @@ export function Hero() {
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8 ">
       {/* <Spotlight className="-top-40 left-0 md:-top-10 " fill="#b1501f" /> */}
-      <Spotlight  />
+      <Spotlight />
       <div
         className={cn(
           "absolute inset-0 h-full",
@@ -56,7 +56,7 @@ export function Hero() {
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
-                I&apos;m a <br /> 
+                I&apos;m a <br />
                 <ContainerTextFlip /> {""}
                 based in Barcelona, Spain.
               </span>

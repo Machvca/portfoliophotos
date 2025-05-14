@@ -145,7 +145,7 @@ const Gallery = ({
                   alt={`Zoomed photo ${lightboxIndex + 1}`}
                   fill
                   className="object-contain rounded-xl"
-                  // priority
+
                 />
               </motion.div>
             </div>
