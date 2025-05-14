@@ -8,7 +8,7 @@ import { AuroraBackground } from "../components/ui/aurora-background";
 function Page() {
   return (
     <AuroraBackground>
-      <section className="mt-28 md:mt-24 pb-16 flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-20 z-30 max-w-7xl mx-12">
+      <section className="mt-24 md:mt-24 pb-28 flex flex-col md:flex-row items-center justify-between gap-8 px-6 md:px-20 z-30 max-w-7xl mx-12">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ function Page() {
           <h1 className="text-left md:text-left text-5xl md:text-7xl lg:text-9xl font-mono text-terracota">
             ABOUT ME
           </h1>
-          <p className=" text-sm md:text-lg lg:text-xl mt-4 text-slate-950 font-mono">
+          <p className=" text-xs md:text-lg lg:text-xl mt-4 text-slate-950 font-mono">
             I&apos;m a photographer from a small town in southern Mexico, now living
             in Barcelona since 2016. I&apos;ve always loved photography, but I never
             really thought about learning it seriously – until 2022, when I
