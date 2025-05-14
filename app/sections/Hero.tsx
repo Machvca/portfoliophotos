@@ -91,7 +91,7 @@ export function Hero() {
                   />
                   <p
                     className={cn(
-                      "absolute bottom-4 left-4 text-xs md:text-3xl font-medium text-terracota",
+                      "absolute bottom-18 left-4 text-xs md:text-3xl font-medium text-slate-200",
                       "transition-all duration-500",
                       "bg-gradient-to-t from-terracota to-transparent",
                       "md:bg-none ",
