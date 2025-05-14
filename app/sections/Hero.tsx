@@ -4,10 +4,10 @@ import { cn } from "../../lib/utils";
 
 import Image from "next/image";
 import Link from "next/link";
-import main1 from "../../assets/images/main1.jpg";
+import portrait11 from "../../assets/images/portrait11.webp";
 import main2 from "../../assets/images/main2.webp";
-import main3 from "../../assets/images/main3.jpg";
-import main4 from "../../assets/images/main4.jpg";
+import milan2 from "../../public/images/milan2.webp";
+import sh11 from "../../assets/images/sh11.webp";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
 import { Spotlight } from "../components/ui/spothlight-new.tsx";
 
@@ -20,17 +20,17 @@ export function Hero() {
     },
     {
       name: "Travel",
-      image: main3,
+      image: milan2,
       link: "/travel",
     },
     {
       name: "Shootings",
-      image: main4,
+      image: sh11,
       link: "/shootings",
     },
     {
       name: "Portraits",
-      image: main1,
+      image: portrait11,
       link: "/portraits",
     },
   ];

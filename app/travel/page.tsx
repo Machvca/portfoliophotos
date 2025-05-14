@@ -2,11 +2,11 @@
 
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
 import { BackgroundLines } from "../components/ui/background-lines";
-import t1 from "../../assets/images/t1.jpg";
-import t2 from "../../assets/images/t2.jpg";
-import t3 from "../../assets/images/t3.jpg";
-import t4 from "../../assets/images/t4.jpg";
-import t5 from "../../assets/images/t5.jpg";
+import milan3 from "../../public/images/milan3.webp";
+import viena1 from "../../public/images/viena1.webp";
+import tul3 from "../../public/images/tul3.webp";
+import cop2 from "../../public/images/cop2.webp";
+import bar5 from "../../public/images/bar5.webp";
 
 export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -32,32 +32,32 @@ const data = [
   {
     category: "Italy",
     title: "Milan",
-    src: t1,
+    src: milan3,
     link: "/milan",
   },
   {
     category: "Austria",
     title: "Vienna",
-    src: t2,
+    src: viena1,
     link: "/vienna",
   },
   {
     category: "Mexico",
     title: "Tulum",
-    src: t3,
+    src: tul3,
     link: "/tulum",
   },
 
   {
     category: "Denmark",
     title: "Copenhague",
-    src: t4,
+    src: cop2,
     link: "/copen",
   },
   {
     category: "Spain",
     title: "Barcelona",
-    src: t5,
+    src: bar5,
     link: "/barcelona",
   },
  
