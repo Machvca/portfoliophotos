@@ -71,9 +71,12 @@ const Gallery = ({
   }, [handleKeyDown]);
 
   return (
-    <div className="min-h-screen mx-8 md:mx-52 py-20 md:py-32">
+    <div className="min-h-screen mx-8 md:mx-52 py-20 md:py-32 ">
       {/* Photo Grid */}
-      <h1 className=" font-bold text-5xl md:text-7xl text-verde-oliva text-center my-12"> {cityName} </h1>
+      <h1 className=" font-bold text-5xl md:text-7xl text-verde-oliva text-right my-12">
+        {" "}
+        {cityName}{" "}
+      </h1>
       <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[200px] gap-4 mb-12">
         {photos.map((photo, index) => (
           <div
@@ -98,22 +101,20 @@ const Gallery = ({
       <div className="flex justify-between items-center px-4 md:px-8">
         <Link
           href={previousHref}
-          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
+          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-verde-oliva hover:text-terracota "
         >
-          <span className="text-3xl md:text-4xl text-terracota">‹</span>
-          <span className="font-medium text-gray-600 hover:text-terracota">
-            {previousCityName}
-          </span>
+          <span className="text-3xl md:text-4xl ">‹</span>
+          <span className="font-medium ">{previousCityName}</span>
         </Link>
 
         <Link
           href={nextHref}
-          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300"
+          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-verde-oliva hover:text-terracota "
         >
-          <span className="font-medium text-gray-600 hover:text-terracota">
+          <span className="font-medium ">
             {nextCityName}
           </span>
-          <span className="text-3xl md:text-4xl text-terracota">›</span>
+          <span className="text-3xl md:text-4xl ">›</span>
         </Link>
       </div>
 
