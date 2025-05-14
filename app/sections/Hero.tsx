@@ -5,7 +5,7 @@ import { cn } from "../../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import main1 from "../../assets/images/main1.jpg";
-import main2 from "../../assets/images/main2.jpg";
+import main2 from "../../assets/images/main2.webp";
 import main3 from "../../assets/images/main3.jpg";
 import main4 from "../../assets/images/main4.jpg";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";

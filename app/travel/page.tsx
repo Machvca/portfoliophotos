@@ -30,7 +30,7 @@ export default function AppleCardsCarouselDemo() {
 
 const data = [
   {
-    category: "ITALY",
+    category: "Italy",
     title: "Milan",
     src: t1,
     link: "/milan",
