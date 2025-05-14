@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { cn } from "../../lib/utils";
-
 import Image from "next/image";
 import Link from "next/link";
 import portrait11 from "../../assets/images/portrait11.webp";
@@ -9,7 +8,6 @@ import main2 from "../../assets/images/main2.webp";
 import milan2 from "../../public/images/milan2.webp";
 import sh11 from "../../assets/images/sh11.webp";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
-import { Spotlight } from "../components/ui/spothlight-new.tsx";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -38,19 +36,18 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden md:px-24 mb-8">
-      <Spotlight />
       <div
         className={cn(
           "absolute inset-0 h-full",
-          "bg-size-[200px_200px]",
-          "bg-[linear-gradient(to_right,#dbdbdb_1px,transparent_1px),linear-gradient(to_bottom,#dbdbdb_1px,transparent_1px)]"
+          "bg-size-[380px_380px]",
+          "bg-[linear-gradient(to_right,#808000_1px,transparent_1px),linear-gradient(to_bottom,#808000_1px,transparent_1px)]"
         )}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center md:py-12">
         {/* Texto principal */}
         <div className="min-h-[50vh] relative w-full justify-center md:-mt-96">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 md:mb-0 md:mt-48 mt-28 z-20 font-mono font-bold text-2xl md:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-900">
+          <div className="grid mb-32 md:mb-0 md:mt-72 mt-28 z-20 font-mono font-bold text-2xl md:text-3xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-gradient-to-tl from-verde-oliva to-stone-900">
             <h1>
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
@@ -76,7 +73,8 @@ export function Hero() {
                   className={cn(
                     "group relative cursor-pointer overflow-hidden rounded-2xl",
                     "transform transition duration-500 hover:scale-105 hover:opacity-100",
-                    "filter drop-shadow-[0_25px_25px_#c458247f]"
+                    "filter drop-shadow-[0_25px_25px_#c458247f]",
+                    "hover:mask-t-from-99 hover:mask-b-from-99"
                   )}
                 >
                   <Image
@@ -93,10 +91,10 @@ export function Hero() {
                   />
                   <p
                     className={cn(
-                      "absolute bottom-4 left-4 text-sm md:text-3xl font-medium text-terracota",
+                      "absolute bottom-4 left-4 text-xs md:text-3xl font-medium text-terracota",
                       "transition-all duration-500",
-                      "bg-gradient-to-t from-terracota/10 to-transparent",
-                      "md:bg-none md:text-stone-950",
+                      "bg-gradient-to-t from-terracota to-transparent",
+                      "md:bg-none ",
                       "opacity-100 md:opacity-0 md:group-hover:opacity-100"
                     )}
                   >
