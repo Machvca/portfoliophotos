@@ -4,6 +4,9 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
+import InstaIcon from "../components/icons/InstaIcon";
+
+
 
 export default function Navbar() {
   const navItems = [
@@ -86,7 +89,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
             >
-              Instagram
+              <InstaIcon />
             </a>
           </div>
         </div>
@@ -128,10 +131,10 @@ export default function Navbar() {
                 href="https://www.instagram.com/machvca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pointer-events-auto hover:text-terracota"
+                className="pointer-events-auto text-verde-oliva"
                 onClick={() => setIsOpen(false)}
               >
-                Instagram
+<InstaIcon className="w-24 h-24 text-stone-200" />
               </a>
             </div>
           </BackgroundGradientAnimation>
