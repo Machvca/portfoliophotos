@@ -45,13 +45,6 @@ export default function BackgroundBeamsDemo() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
 
-  // Función para ir a la imagen anterior
-  // const goToPreviousImage = () => {
-  //   if (currentIndex !== null && currentIndex > 0) {
-  //     setSelectedImage(portraitsPictures[currentIndex - 1].image.src);
-  //     setCurrentIndex(currentIndex - 1);
-  //   }
-  // };
   const goToPreviousImage = useCallback(() => {
     if (currentIndex !== null && currentIndex > 0) {
       setSelectedImage(portraitsPictures[currentIndex - 1].image.src);
@@ -59,13 +52,6 @@ export default function BackgroundBeamsDemo() {
     }
   }, [currentIndex]);
 
-  // Función para ir a la imagen siguiente
-  // const goToNextImage = () => {
-  //   if (currentIndex !== null && currentIndex < portraitsPictures.length - 1) {
-  //     setSelectedImage(portraitsPictures[currentIndex + 1].image.src);
-  //     setCurrentIndex(currentIndex + 1);
-  //   }
-  // };
 
   const goToNextImage = useCallback(() => {
     if (currentIndex !== null && currentIndex < portraitsPictures.length - 1) {

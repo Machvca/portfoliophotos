@@ -13,6 +13,7 @@ const copenGallery = () => (
         { src: "/images/cop5.webp", span: "col-span-1 row-span-2" },
         { src: "/images/cop6.webp", span: "col-span-2 row-span-2" },
     ]}
+
     previousHref="/tulum"
     nextHref="/barcelona"
     previousCityName="Tulum, México"
@@ -21,4 +22,4 @@ const copenGallery = () => (
   />
 );
 
-export default copenGallery;
+export default copenGallery;                  

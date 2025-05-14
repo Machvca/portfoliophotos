@@ -100,7 +100,7 @@ export default function BackgroundBeamsDemo() {
               src={portrait.image}
               alt={portrait.name}
               className="w-full h-auto object-cover transition-transform duration-300 hover:scale-130"
-              priority={index === 0} // 👈 AQUI VA LA SOLUCIÓN
+              // priority={index === 0} // 👈 AQUI VA LA SOLUCIÓN
             />
           </div>
         ))}

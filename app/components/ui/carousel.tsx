@@ -100,7 +100,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
-            priority={index === 0}
+            // priority={index === 0}
           />
           {current === index && (
             <div className="absolute inset-0  transition-all duration-2000" />

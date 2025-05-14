@@ -40,7 +40,7 @@ function Page() {
           width={500}
           height={100}
           className="rounded-md opacity-100 hover:scale-105 transition-transform duration-300 w-full max-w-sm md:max-w-md mask-r-from-80% mask-b-from-80% mask-from-90% mask-to-95%"
-          priority
+          // priority
         />
       </section>
     </AuroraBackground>
