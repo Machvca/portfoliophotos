@@ -67,8 +67,8 @@ export function Hero() {
         </div>
 
         {/* Nueva sección para las imágenes */}
-        <div className="w-full grid grid-cols -mt-52 md:mt-4 md:mb-32 px-6 ">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-3  md:py-16 mx-8 md:mx-0 pb-16">
+        <div className="w-full grid  -mt-24 md:mt-4 md:mb-32 px-6 ">
+          <div className="grid grid-cols-2 gap-4 md:gap-3  md:py-16 mx-4 md:mx-0 pb-16">
             {heroPictures.map(({ name, image, link }) => (
               <Link key={name} href={link} passHref>
                 <div

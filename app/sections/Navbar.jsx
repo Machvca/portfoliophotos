@@ -102,7 +102,7 @@ export default function Navbar() {
             className={`${isOpen ? "" : "pointer-events-none"}`}
           >
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-64 text-stone-200  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-52 text-stone-200  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
                 className="pointer-events-auto hover:text-terracota"
