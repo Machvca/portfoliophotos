@@ -58,7 +58,7 @@ export function Hero() {
                 <br />
                 I&apos;m a <br /> 
                 <ContainerTextFlip /> {""}
-                based in Barcelona, Spain
+                based in Barcelona, Spain.
               </span>
             </h1>
 
