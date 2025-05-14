@@ -24,7 +24,7 @@ function Page() {
           </h1>
           <p className=" text-sm md:text-lg lg:text-xl mt-4 text-slate-950 font-mono">
             I&apos;m a photographer from a small town in southern Mexico, now living
-            in Barcelona since 2016. I've always loved photography, but I never
+            in Barcelona since 2016. I&apos;ve always loved photography, but I never
             really thought about learning it seriously – until 2022, when I
             bought my first professional camera. I took a couple of courses,
             learned a lot on my own, and quickly got hooked. Since then, I
