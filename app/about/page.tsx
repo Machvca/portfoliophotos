@@ -23,13 +23,15 @@ function Page() {
             ABOUT ME
           </h1>
           <p className=" text-sm md:text-lg lg:text-xl mt-4 text-slate-950 font-mono">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, id
-            quia? Ab, eligendi cupiditate minima animi, porro quaerat dolores at
-            possimus necessitatibus excepturi, maiores laborum obcaecati optio.
-            Et, pariatur adipisci? Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Incidunt rerum ducimus minima natus iste
-            necessitatibus assumenda cupiditate quia, delectus sit? Fugit dicta
-            esse fuga neque maiores accusantium sapiente placeat expedita.
+            I&apos;m a photographer from a small town in southern Mexico, now living
+            in Barcelona since 2016. I've always loved photography, but I never
+            really thought about learning it seriously – until 2022, when I
+            bought my first professional camera. I took a couple of courses,
+            learned a lot on my own, and quickly got hooked. Since then, I
+            haven’t stopped learning, practicing, and improving. I really enjoy the whole process – from editing to
+            coming up with creative angles and ideas to capture nice shots. I mostly shoot portraits, events, and
+            street photography – always looking for real moments, 
+            and personality in every frame.
           </p>
         </motion.div>
         <Image

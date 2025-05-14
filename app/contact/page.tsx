@@ -60,17 +60,15 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-gradient-to-br from-terracota via-terracota/10 to-terracota/80 min-h-screen flex flex-col">
+    <main className="bg-gradient-to-br from-terracota/10 via-terracota/30 to-terracota min-h-screen flex flex-col">
       <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
-        <div className="w-full max-w-2xl bg-[#feefef] rounded-2xl shadow-xl p-8 border border-gray-100">
-          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center font-syne">
+        <div className="w-full max-w-2xl bg-terracota/15 border border-terracota rounded-2xl shadow-2xl p-8  ">
+          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center">
             Contact Me
           </h2>
           <p className="text-stone-950 text-xs md:text-base mb-8 text-center ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-            quas aliquam fugit libero eveniet vitae temporibus delectus
-            architecto iure, porro inventore beatae nemo a, cumque, voluptatum
-            impedit dolorum voluptates? Aperiam!
+            Tell me a bit about the project you’d like to work on together – I’d
+            love to hear your ideas!
           </p>
 
           <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
@@ -87,7 +85,7 @@ export default function ContactPage() {
                 id="email"
                 required
                 placeholder="youremail@example.com"
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-950"
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-stone-100 invalid:focus:ring-stone-200"
                 onChange={handleInputChange}
               />
             </div>
@@ -105,7 +103,7 @@ export default function ContactPage() {
                 id="subject"
                 required
                 placeholder="Portraits, corporate event, etc."
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-950"
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-200  invalid:focus:ring-red-950"
                 onChange={handleInputChange}
               />
             </div>
@@ -123,7 +121,7 @@ export default function ContactPage() {
                 rows={6}
                 required
                 placeholder="Tell me about your event and preferred date/time..."
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-500 invalid:border-red-200 invalid:focus:ring-red-900"
+                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-stone-100 focus:ring-2 focus:ring- invalid:focus:terracota"
                 onChange={handleInputChange}
               />
             </div>
@@ -133,8 +131,8 @@ export default function ContactPage() {
               disabled={!isFormValid || loading}
               className={`w-full font-medium py-3 rounded-xl transition duration-300 shadow-2xl flex items-center justify-center ${
                 isFormValid && !loading
-                  ? "bg-[#621316] text-stone-100 cursor-pointer"
-                  : "bg-[#621316]/20 text-[#621316] cursor-not-allowed opacity-50"
+                  ? "bg-terracota text-stone-100 cursor-pointer hover:scale-105"
+                  : "bg-terracota/20 text-terracota cursor-not-allowed opacity-50 border"
               }`}
             >
               {loading ? (
