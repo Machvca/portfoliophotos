@@ -104,14 +104,14 @@ const Gallery = ({
           className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-verde-oliva hover:text-terracota "
         >
           <span className="text-3xl md:text-4xl ">‹</span>
-          <span className="font-medium ">{previousCityName}</span>
+          <span className="font-medium text-xs md:text-xl ">{previousCityName}</span>
         </Link>
 
         <Link
           href={nextHref}
           className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-verde-oliva hover:text-terracota "
         >
-          <span className="font-medium ">
+          <span className="font-medium text-xs md:text-xl ">
             {nextCityName}
           </span>
           <span className="text-3xl md:text-4xl ">›</span>
