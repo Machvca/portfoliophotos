@@ -1,41 +1,40 @@
 @import "tailwindcss";
 
-
-
-
 @theme inline {
   --animate-aurora: aurora 60s linear infinite;
   @keyframes aurora {
     from {
-      background-position: 50% 50%, 50% 50%;
+      background-position:
+        50% 50%,
+        50% 50%;
     }
     to {
-      background-position: 350% 50%, 350% 50%;
+      background-position:
+        350% 50%,
+        350% 50%;
     }
   }
 
-
   --color-terracota: #c45824;
-  --color-marron-oscuro: #4b2e2b;     /* Chocolate oscuro */
-  --color-marron-claro: #a0522d;      /* Siena tostado */
-  --color-beige-claro: #f5f5dc;       /* Beige */
-  --color-crema: #fff5e1;             /* Crema */
-  --color-verde-oliva: #808000;       /* Verde oliva */
-  --color-gris-suave: #d3d3d3;        /* Gris claro */
-  --color-azul-profundo: #013220; 
+  --color-marron-oscuro: #4b2e2b; /* Chocolate oscuro */
+  --color-marron-claro: #a0522d; /* Siena tostado */
+  --color-beige-claro: #f5f5dc; /* Beige */
+  --color-crema: #fff5e1; /* Crema */
+  --color-stone-950: #808000; /* Verde oliva */
+  --color-gris-suave: #d3d3d3; /* Gris claro */
+  --color-azul-profundo: #013220;
 
   /* fonts */
   --font-roboto: var(--font-roboto);
 
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 
-
   --animate-first: moveVertical 30s ease infinite;
   --animate-second: moveInCircle 20s reverse infinite;
   --animate-third: moveInCircle 40s linear infinite;
   --animate-fourth: moveHorizontal 40s ease infinite;
   --animate-fifth: moveInCircle 20s ease infinite;
- 
+
   @keyframes moveHorizontal {
     0% {
       transform: translateX(-50%) translateY(-10%);
@@ -47,7 +46,7 @@
       transform: translateX(-50%) translateY(-10%);
     }
   }
- 
+
   @keyframes moveInCircle {
     0% {
       transform: rotate(0deg);
@@ -59,7 +58,7 @@
       transform: rotate(360deg);
     }
   }
- 
+
   @keyframes moveVertical {
     0% {
       transform: translateY(-50%);
@@ -72,10 +71,6 @@
     }
   }
 }
-
-
-
-
 
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,

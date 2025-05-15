@@ -6,24 +6,22 @@ import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 import InstaIcon from "../components/icons/InstaIcon";
 
-
-
 export default function Navbar() {
   const navItems = [
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-verde-oliva" />,
+      icon: <IconHome className="h-4 w-4 text-stone-950" />,
     },
     {
       name: "About",
       link: "/about",
-      icon: <IconUser className="h-4 w-4 text-verde-oliva" />,
+      icon: <IconUser className="h-4 w-4 text-stone-950" />,
     },
     {
       name: "Contact",
       link: "/contact",
-      icon: <IconMessage className="h-4 w-4 text-verde-oliva" />,
+      icon: <IconMessage className="h-4 w-4 text-stone-950" />,
     },
   ];
 
@@ -56,7 +54,7 @@ export default function Navbar() {
       >
         <div className="container mx-6 md:mx-24 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className=" md:block hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
+            <h1 className=" md:block hover:text-stone-950 hover:shadow-2xl hover:shadow-stone-950">
               Machuca
             </h1>
           </Link>
@@ -73,13 +71,13 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-6 ">
             <Link
               href="/about"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950"
             >
               About Me
             </Link>
             <Link
               href="/contact"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950"
             >
               Contact
             </Link>
@@ -87,7 +85,7 @@ export default function Navbar() {
               href="https://www.instagram.com/machvca/"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:shadow-2xl hover:shadow-verde-oliva hover:text-verde-oliva"
+              className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950"
             >
               <InstaIcon />
             </a>
@@ -131,10 +129,10 @@ export default function Navbar() {
                 href="https://www.instagram.com/machvca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pointer-events-auto text-verde-oliva"
+                className="pointer-events-auto text-stone-950"
                 onClick={() => setIsOpen(false)}
               >
-<InstaIcon className="w-24 h-24 text-stone-200" />
+                <InstaIcon className="w-24 h-24 text-stone-200" />
               </a>
             </div>
           </BackgroundGradientAnimation>
