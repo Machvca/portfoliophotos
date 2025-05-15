@@ -50,13 +50,13 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-2xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
+        className={`fixed text-lg md:text-2xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
-        <div className="container mx-24 py-4 flex justify-between items-center">
+        <div className="container mx-6 md:mx-24 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className="hidden md:block hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
+            <h1 className=" md:block hover:text-verde-oliva hover:shadow-2xl hover:shadow-verde-oliva">
               Machuca
             </h1>
           </Link>
@@ -120,13 +120,13 @@ export default function Navbar() {
               >
                 Contact
               </Link>
-              <Link
+              {/* <Link
                 href="/"
                 className="pointer-events-auto hover:text-terracota"
                 onClick={() => setIsOpen(false)}
               >
                 Home
-              </Link>
+              </Link> */}
               <a
                 href="https://www.instagram.com/machvca/"
                 target="_blank"

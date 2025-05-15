@@ -39,8 +39,8 @@ export function Hero() {
       <div
         className={cn(
           "absolute inset-0 h-full",
-          "bg-size-[380px_380px]",
-          "bg-[linear-gradient(to_right,#808000_1px,transparent_1px),linear-gradient(to_bottom,#808000_1px,transparent_1px)]"
+          "bg-size-[110px_110px]",
+          "bg-[linear-gradient(to_right,#ffb894_1px,transparent_1px),linear-gradient(to_bottom,#ffb894_1px,transparent_1px)]"
         )}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center md:py-12">
@@ -91,9 +91,9 @@ export function Hero() {
                   />
                   <p
                     className={cn(
-                      "absolute bottom-18 left-4 text-xs md:text-3xl font-medium text-slate-200",
+                      "absolute bottom-0 left-2 text-xs md:text-3xl font-medium text-slate-200",
                       "transition-all duration-500",
-                      "bg-gradient-to-t from-terracota to-transparent",
+                      "",
                       "md:bg-none ",
                       "opacity-100 md:opacity-0 md:group-hover:opacity-100"
                     )}
