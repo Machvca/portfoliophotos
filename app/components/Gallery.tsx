@@ -73,7 +73,7 @@ const Gallery = ({
   return (
     <div className="min-h-screen mx-8 md:mx-52 py-20 md:py-32 ">
       {/* Photo Grid */}
-      <h1 className=" font-bold text-5xl md:text-7xl text-stone-950 text-right my-12">
+      <h1 className=" font-bold text-5xl md:text-7xl text-verde-oliva text-right my-12">
         {" "}
         {cityName}{" "}
       </h1>
