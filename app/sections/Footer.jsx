@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className=" bottom-0 left-0 right-0 inset-0 z-30 w-full  pb-2 text-verde-oliva bg-transparent text-center  text-xs sm:text-lg ">
-      © Jorge Machuca. All rights reserved. 
+    <footer className=" bottom-0 left-0 right-0 inset-0 z-0 w-full -mt-8 md:-mt-12  pb-2 text-verde-oliva bg-transparent text-center   text-xs md:text-lg ">
+      © Jorge Machuca. All rights reserved.
     </footer>
   );
 }

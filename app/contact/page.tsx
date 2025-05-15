@@ -60,7 +60,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-gradient-to-br from-terracota/15 via-terracota/30 to-terracota min-h-screen flex flex-col">
+    <main className="bg-gradient-to-br from-terracota/15 via-terracota/30 to-terracota min-h-screen flex flex-col h-full">
       <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
         <div className="w-full max-w-2xl bg-terracota/15 rounded-2xl shadow-2xl p-8  ">
           <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center">

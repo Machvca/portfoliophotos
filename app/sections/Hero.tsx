@@ -35,7 +35,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden md:px-24 mb-8">
+    <section className="relative w-full overflow-hidden md:px-24  bg-terracota/15">
       <div
         className={cn(
           "absolute inset-0 h-full",

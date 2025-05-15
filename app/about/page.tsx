@@ -8,7 +8,7 @@ import { AuroraBackground } from "../components/ui/aurora-background";
 function Page() {
   return (
     <AuroraBackground>
-      <section className="mt-24 md:mt-24 pb-28 flex flex-col md:flex-row items-center justify-between gap-8 md:px-20 z-30 max-w-7xl mx-12">
+      <section className="mt-24 md:mt-64 h-full pb-28 md:pb-92 flex flex-col md:flex-row items-center justify-between gap-8 md:px-20 z-30 max-w-7xl mx-12">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,15 +23,17 @@ function Page() {
             ABOUT ME
           </h1>
           <p className=" text-xs md:text-lg lg:text-xl mt-4 text-slate-950 font-mono">
-            I&apos;m a photographer from a small town in southern Mexico, now living
-            in Barcelona since 2016. I&apos;ve always loved photography, but I never
-            really thought about learning it seriously – until 2022, when I
-            bought my first professional camera.<br/> I took a couple of courses,
-            learned a lot on my own, and quickly got hooked. <br /><br/> Since then, I
-            haven’t stopped learning, practicing, and improving. I really enjoy the whole process – from editing to
-            coming up with creative angles and ideas to capture nice shots. <br /> <br/>I mostly shoot portraits, events, and
-            street photography – always looking for real moments, 
-            and personality in every frame.
+            I&apos;m a photographer from a small town in southern Mexico, now
+            living in Barcelona since 2016. I&apos;ve always loved photography,
+            but I never really thought about learning it seriously – until 2022,
+            when I bought my first professional camera.
+            <br /> I took a couple of courses, learned a lot on my own, and
+            quickly got hooked. <br />
+            <br /> Since then, I haven’t stopped learning, practicing, and
+            improving. I really enjoy the whole process – from editing to coming
+            up with creative angles and ideas to capture nice shots. <br />{" "}
+            <br />I mostly shoot portraits, events, and street photography –
+            always looking for real moments, and personality in every frame.
           </p>
         </motion.div>
         <Image
