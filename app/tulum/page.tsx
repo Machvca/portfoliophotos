@@ -15,8 +15,8 @@ const tulumGallery = () => (
     ]}
     previousHref="/vienna"
     nextHref="/copen"
-    previousCityName="Vienna, Austria"
-    nextCityName="Copenhagen, Denmark"
+    previousCityName="Vienna"
+    nextCityName="Copenhagen"
     cityName="Tulum, Mexico"
   />
 );

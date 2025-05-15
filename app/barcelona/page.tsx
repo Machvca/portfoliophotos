@@ -15,7 +15,7 @@ const barcelonaGallery = () => (
     ]}
     previousHref="/copen"
     nextHref="/travel"
-    previousCityName="Copenhagen, Denmark"
+    previousCityName="Copenhagen"
     nextCityName=""
     cityName="Barcelona, Spain"
   />

@@ -16,7 +16,7 @@ const viennaGallery = () => (
     previousHref="/milan"
     nextHref="/tulum"
     previousCityName="Milan"
-    nextCityName="Tulum, Mexico"
+    nextCityName="Tulum"
     cityName="Vienna, Austria"
   />
 );

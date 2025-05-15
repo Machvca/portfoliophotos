@@ -16,8 +16,8 @@ const copenGallery = () => (
 
     previousHref="/tulum"
     nextHref="/barcelona"
-    previousCityName="Tulum, México"
-    nextCityName="Barcelona, Spain"
+    previousCityName="Tulum"
+    nextCityName="Barcelona"
     cityName="Copenhagen, Denmark"
   />
 );
