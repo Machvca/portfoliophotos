@@ -46,7 +46,7 @@ const portraitsPictures = portraitImages.map((image, index) => ({
 
 export default function DraggableCardDemo() {
   return (
-    <DraggableCardContainer className="relative flex h-screen w-full items-center justify-center overflow-hidden">
+    <DraggableCardContainer className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-terracota/15">
       {/* Título en el centro */}
       <p className="absolute top-1/2 text-center text-4xl font-black text-neutral-400 dark:text-terracota">
         PORTRAITS
