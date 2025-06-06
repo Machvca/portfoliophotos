@@ -4,9 +4,9 @@ import { cn } from "../../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import portrait11 from "../../assets/images/portrait11.webp";
-import main2 from "../../assets/images/main2.webp";
+import sh12 from "../../assets/images/sh12.webp";
 import milan2 from "../../public/images/milan2.webp";
-import sh11 from "../../assets/images/sh11.webp";
+import mainshooting from "../../assets/images/mainshooting.webp";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ export function Hero() {
   const heroPictures = [
     {
       name: "Latest",
-      image: main2,
+      image: mainshooting,
       link: "/latest",
     },
     {
@@ -24,7 +24,7 @@ export function Hero() {
     },
     {
       name: "Shootings",
-      image: sh11,
+      image: sh12,
       link: "/shootings",
     },
     {
@@ -91,7 +91,7 @@ export function Hero() {
                   />
                   <p
                     className={cn(
-                      "absolute bottom-0 left-2 text-xs md:text-3xl font-medium text-slate-200",
+                      "absolute bottom-1 md:bottom-10  text-xs md:text-3xl font-medium text-slate-300 ",
                       "transition-all duration-500",
                       "",
                       "md:bg-none ",

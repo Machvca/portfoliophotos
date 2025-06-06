@@ -3,6 +3,12 @@
 
 import { useRef, useState } from "react";
 import { showToast } from "nextjs-toast-notify";
+import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
+import portrait11 from "../../assets/images/portrait11.webp";
+import testi1 from "../../assets/images/testi1.webp";
+import testi2 from "../../assets/images/testi2.webp";
+import testi3 from "../../assets/images/testi3.webp";
+
 
 export default function ContactPage() {
   // namespace “Contact”
@@ -49,18 +55,53 @@ export default function ContactPage() {
       formRef.current?.reset();
       setFormData({ email: "", subject: "", message: "" });
     } else {
-        showToast.error("Error sending email. Please try again.", {
-          duration: 4000,
-          progress: true,
-          position: "top-right",
-          transition: "bounceIn",
-        });
-      }
+      showToast.error("Error sending email. Please try again.", {
+        duration: 4000,
+        progress: true,
+        position: "top-right",
+        transition: "bounceIn",
+      });
+    }
     setLoading(false);
   };
 
+  const testimonials = [
+    {
+      quote:
+        "Loved the entire process — from planning to final delivery. The photographer was easy to work with and truly captured what I was looking for. Excellent communication too!”",
+      name: "Bastien Bonilla",
+      designation: "Magician",
+      src: testi2,
+    },
+    {
+      quote:
+        "“Such a seamless and fun photoshoot! The photographer was super attentive and communicative, and the pictures turned out amazing. 10/10!”",
+      name: "Andrea Love",
+      designation: "Dj",
+      src: portrait11,
+    },
+    {
+      quote:
+        "Great experience! Everything was super professional and well-organized. The photographer made me feel comfortable throughout the whole shoot. Would definitely book again.",
+      name: "Manuel de la Torre",
+      designation: "Bussiness Owner",
+      src: testi1,
+    },
+    {
+      quote:
+        "The photoshoot was an amazing experience from start to finish. Communication was smooth and clear, and the final results were exactly what I hoped for. Highly recommended!",
+      name: "Andrea Longhini",
+      designation: "Event planner",
+      src: testi3,
+    },
+  ];
+
   return (
     <main className="bg-gradient-to-br from-terracota/15 via-terracota/30 to-terracota min-h-screen flex flex-col h-full">
+      <section className=" flex flex-col items-center text-md md:text-4xl pt-18  md:pt-24  text-shadow-2xl ">
+        <p className="text-slate-950">Some kind words from my clients</p>
+        <AnimatedTestimonials testimonials={testimonials} />
+      </section>
       <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
         <div className="w-full max-w-2xl bg-terracota/15 rounded-2xl shadow-2xl p-8  ">
           <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center">
