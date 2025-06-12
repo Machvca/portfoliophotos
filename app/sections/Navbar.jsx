@@ -48,11 +48,11 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-lg md:text-2xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
+        className={`fixed text-lg lg:text-xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
-        <div className="container mx-6 md:mx-24 py-4 flex justify-between items-center">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-4 flex justify-between items-center">
           <Link href="/">
             <h1 className=" md:block hover:text-stone-950 hover:shadow-2xl hover:shadow-stone-950">
               Machuca
@@ -118,13 +118,6 @@ export default function Navbar() {
               >
                 Contact
               </Link>
-              {/* <Link
-                href="/"
-                className="pointer-events-auto hover:text-terracota"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link> */}
               <a
                 href="https://www.instagram.com/machvca/"
                 target="_blank"

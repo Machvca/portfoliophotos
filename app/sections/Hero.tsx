@@ -47,7 +47,7 @@ export function Hero() {
         {/* Texto principal */}
         <div className="min-h-[50vh] relative w-full justify-center md:-mt-96">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0 md:mt-72 mt-28 z-20 font-mono font-bold text-2xl md:text-3xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-terracota to-slate-950">
+          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0 md:mt-72  mt-28 z-20 font-mono font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-terracota to-slate-950">
             <h1>
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>

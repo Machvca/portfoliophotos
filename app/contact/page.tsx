@@ -98,7 +98,7 @@ export default function ContactPage() {
 
   return (
     <main className="bg-gradient-to-br from-terracota/15 via-terracota/30 to-terracota min-h-screen flex flex-col h-full">
-      <section className=" flex flex-col items-center text-md md:text-4xl pt-18  md:pt-24  text-shadow-2xl ">
+      <section className=" flex flex-col items-center text-md md:text-4xl pt-18  md:pt-24 -mb-24 text-shadow-2xl ">
         <p className="text-slate-950">Some kind words from my clients</p>
         <AnimatedTestimonials testimonials={testimonials} />
       </section>

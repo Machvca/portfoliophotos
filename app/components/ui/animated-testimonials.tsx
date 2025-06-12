@@ -48,7 +48,7 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-xs px-4 py-20 font-mono antialiased md:max-w-4xl md:px-8 lg:px-12">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
@@ -123,7 +123,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-gray-500 dark:text-verde-oliva">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-terracota/90">
+            <motion.p className="mt-8 text-md text-gray-500 dark:text-slate-950">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
