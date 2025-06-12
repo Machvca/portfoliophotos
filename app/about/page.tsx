@@ -8,7 +8,7 @@ import { AuroraBackground } from "../components/ui/aurora-background";
 function Page() {
   return (
     <AuroraBackground>
-      <section className="mt-24 md:mt-40 pb-28 md:pb-40 flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto z-30">
+      <section className="mt-24 md:mt-70 pb-28 md:pb-40 flex flex-col md:flex-row items-center justify-between gap-12 px-6 md:px-12 lg:px-20 max-w-7xl mx-auto z-30">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

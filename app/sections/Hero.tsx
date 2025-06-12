@@ -35,12 +35,12 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden md:px-24  ">
+    <section className="relative w-full overflow-hidden md:px-24 bg-terracota/20  ">
       <div
         className={cn(
           "absolute inset-0 h-full",
-          "bg-size-[110px_110px]",
-          "bg-[linear-gradient(to_right,#ffb894_1px,transparent_1px),linear-gradient(to_bottom,#ffb894_1px,transparent_1px)]"
+          "bg-size-[180px_180px]",
+          "bg-[linear-gradient(to_right,#cb7d56_1px,transparent_1px),linear-gradient(to_bottom,#cb7d56_1px,transparent_1px)]"
         )}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center md:py-12">
@@ -57,7 +57,7 @@ export function Hero() {
                 based in Barcelona, Spain.
               </span>
             </h1>
-            <p>Welcome to my Portfolio!</p>
+            <p>Welcome to my portfolio!</p>
           </div>
         </div>
 
