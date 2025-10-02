@@ -19,22 +19,14 @@ function Page() {
             ABOUT ME
           </h1>
           <p className="text-sm md:text-base lg:text-lg mt-6 text-slate-950 font-mono leading-relaxed">
-            I'm a photographer from a small town in southern Mexico, now living
-            in Barcelona since 2016. I&apos;ve always loved photography, but I
-            never really thought about learning it seriously – until 2022, when
-            I bought my first professional camera.
-            <br />
-            <br />
-            I took a couple of courses, learned a lot on my own, and quickly got
-            hooked.
-            <br />
-            <br />
-            Since then, I haven’t stopped learning, practicing, and improving. I
-            really enjoy the whole process – from editing to coming up with
-            creative angles and ideas to capture nice shots.
-            <br />
-            <br />I mostly shoot portraits, events, and street photography –
-            always looking for real moments, and personality in every frame.
+            I’m a photographer from southern Mexico, living in Barcelona since
+            2016 and recently moved to Hemsedal, Norway.
+            <br /> In 2022 I bought my first professional camera and turned a
+            long-time passion into my career.
+            <br /> I focus on portraits, events, and street photography, always
+            aiming to capture authentic moments and real personality. Inspired
+            now by Norway’s light and landscapes, I’m excited to bring that
+            atmosphere into my work.
           </p>
         </motion.div>
 
