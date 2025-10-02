@@ -48,13 +48,13 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-lg lg:text-xl top-0 left-0 right-0 z-50 text-terracota transition-colors duration-600 ${
+        className={`fixed text-lg lg:text-xl top-0 left-0 right-0 z-50 text-[#eae9ff] transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className=" md:block hover:text-stone-950 hover:shadow-2xl hover:shadow-stone-950">
+            <h1 className=" md:block hover:text-indigo-700 ">
               Machuca
             </h1>
           </Link>

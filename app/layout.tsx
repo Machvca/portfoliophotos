@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${roboto.variable} font-mono antialiased flex flex-col min-h-screen bg-terracota/30`}
+        className={`${roboto.variable} font-mono antialiased flex flex-col min-h-screen bg-gradient-to-r from-indigo-900 to-indigo-400`}
       >
         <Navbar />
         <main className="">{children}</main>

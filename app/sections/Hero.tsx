@@ -40,14 +40,14 @@ export function Hero() {
         className={cn(
           "absolute inset-0 h-full",
           "bg-size-[180px_180px]",
-          "bg-[linear-gradient(to_right,#cb7d56_1px,transparent_1px),linear-gradient(to_bottom,#cb7d56_1px,transparent_1px)]"
+          "bg-[linear-gradient(to_right,#312c85_1px,transparent_1px),linear-gradient(to_bottom,#312c85_1px,transparent_1px)]"
         )}
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center md:py-12">
         {/* Texto principal */}
         <div className="min-h-[50vh] relative w-full justify-center md:-mt-136">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-terracota to-slate-950">
+          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-xl  md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-[#eae9ff] to-[#eae9ff]">
             <h1>
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
@@ -73,7 +73,7 @@ export function Hero() {
                   className={cn(
                     "group relative cursor-pointer overflow-hidden rounded-2xl",
                     "transform transition duration-500 hover:scale-105 hover:opacity-100",
-                    "filter drop-shadow-[0_25px_25px_#c458247f]",
+                    "filter drop-shadow-[0_25px_25px_#eae9ff]",
                     "hover:mask-t-from-99 hover:mask-b-from-99"
                   )}
                 >

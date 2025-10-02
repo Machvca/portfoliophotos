@@ -5,7 +5,7 @@ type InstaIconProps = {
 };
 
 const InstaIcon = ({
-  className = "w-8 h-8 text-terracota",
+  className = "w-8 h-8 text-[#eae9ff]",
 }: InstaIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
