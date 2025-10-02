@@ -3,10 +3,10 @@ import React from "react";
 import { cn } from "../../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import portrait11 from "../../assets/images/portrait11.webp";
+import mainportrait from "../../assets/images/mainportrait.webp";
 import sh12 from "../../assets/images/sh12.webp";
 import milan2 from "../../public/images/milan2.webp";
-import mainshooting from "../../assets/images/mainshooting.webp";
+import mainlatest from "../../assets/images/mainlatest.webp";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
 import { motion } from "framer-motion";
 
@@ -14,7 +14,7 @@ export function Hero() {
   const heroPictures = [
     {
       name: "Latest",
-      image: mainshooting,
+      image: mainlatest,
       link: "/latest",
     },
     {
@@ -29,7 +29,7 @@ export function Hero() {
     },
     {
       name: "Portraits",
-      image: portrait11,
+      image: mainportrait,
       link: "/portraits",
     },
   ];
@@ -45,16 +45,16 @@ export function Hero() {
       />
       <div className="relative grid grid-cols-1 md:grid-cols-2 h-full w-full items-center justify-center md:py-12">
         {/* Texto principal */}
-        <div className="min-h-[50vh] relative w-full justify-center md:-mt-96">
+        <div className="min-h-[50vh] relative w-full justify-center md:-mt-136">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0 md:mt-72  mt-28 z-20 font-mono font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-terracota to-slate-950">
+          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-terracota to-slate-950">
             <h1>
               Hi there! <br /> I&apos;m Jorge Machuca.
               <span>
                 <br />
                 I&apos;m a <br />
                 <ContainerTextFlip /> {""}
-                based in Barcelona, Spain.
+                based in Hemsedal, Norway.
               </span>
             </h1>
             <p>Welcome to my portfolio!</p>
