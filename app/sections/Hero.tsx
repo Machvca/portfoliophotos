@@ -47,15 +47,11 @@ export function Hero() {
         {/* Texto principal */}
         <div className="min-h-[50vh] relative w-full justify-center md:-mt-136">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-xl  md:text-4xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-[#eae9ff] to-[#eae9ff]">
+          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-xl md:text-3xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-[#eae9ff] to-[#eae9ff]">
             <h1>
-              Hi there! <br /> I&apos;m Jorge Machuca.
-              <span>
-                <br />
-                I&apos;m a <br />
-                <ContainerTextFlip /> {""}
-                based in Hemsedal, Norway.
-              </span>
+              Hi there! <br /> I&apos;m Jorge Machuca I&apos;m a <br />
+              <ContainerTextFlip /> {""}
+              based in Hemsedal, Norway.
             </h1>
             <p>Welcome to my portfolio!</p>
           </div>

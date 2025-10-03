@@ -15,18 +15,25 @@ function Page() {
           transition={{ delay: 0.4, duration: 1, ease: "easeInOut" }}
           className="w-full md:w-1/2 text-left"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono text-terracota">
+          <h1 className="text-4xl md:text-5xl lg:text-8xl font-mono text-[#eae9ff]">
             ABOUT ME
           </h1>
-          <p className="text-sm md:text-base lg:text-lg mt-6 text-slate-950 font-mono leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg mt-6 text-[#eae9ff] font-mono leading-relaxed">
             I’m a photographer from southern Mexico, living in Barcelona since
-            2016 and recently moved to Hemsedal, Norway.
-            <br /> In 2022 I bought my first professional camera and turned a
-            long-time passion into my career.
-            <br /> I focus on portraits, events, and street photography, always
-            aiming to capture authentic moments and real personality. Inspired
-            now by Norway’s light and landscapes, I’m excited to bring that
-            atmosphere into my work.
+            2016.
+            <br />
+            After several years there, I decided to move to Hemsedal, Norway, in
+            search of new opportunities for both personal and professional
+            growth.
+            <br />
+            In 2022 I bought my first professional camera and turned a long-time
+            passion into my career.
+            <br />
+            I focus on portraits, events, and street photography, always aiming
+            to capture authentic moments and real personality.
+            <br />
+            Inspired now by Norway’s light and landscapes, I’m excited to bring
+            that atmosphere into my work.
           </p>
         </motion.div>
 

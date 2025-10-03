@@ -48,15 +48,13 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed text-lg lg:text-xl top-0 left-0 right-0 z-50 text-[#eae9ff] transition-colors duration-600 ${
+        className={`fixed text-md md:text-xl lg:text-xl top-0 left-0 right-0 z-50 text-[#eae9ff] transition-colors duration-600 ${
           isScrolled ? "hidden" : "bg-transparent"
         }`}
       >
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className=" md:block hover:text-indigo-700 ">
-              Machuca
-            </h1>
+            <h1 className=" md:block hover:text-indigo-700 ">Machuca</h1>
           </Link>
 
           {/* Botón hamburguesa / X */}
@@ -85,7 +83,7 @@ export default function Navbar() {
               href="https://www.instagram.com/machvca/"
               target="_blank"
               rel="noopener noreferrer"
-              className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950"
+              className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950 text-indigo-900"
             >
               <InstaIcon />
             </a>
@@ -103,17 +101,17 @@ export default function Navbar() {
             className={`${isOpen ? "" : "pointer-events-none"}`}
           >
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-52 text-stone-200  flex flex-col items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-52 text-[#eae9ff] flex flex-col items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
-                className="pointer-events-auto hover:text-terracota"
+                className="pointer-events-auto hover:text-[#eae9ff]"
                 onClick={() => setIsOpen(false)}
               >
                 About Me
               </Link>
               <Link
                 href="/contact"
-                className="pointer-events-auto hover:text-terracota"
+                className="pointer-events-auto hover:text-[#eae9ff]"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
@@ -122,10 +120,10 @@ export default function Navbar() {
                 href="https://www.instagram.com/machvca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="pointer-events-auto text-stone-950"
+                className="pointer-events-auto"
                 onClick={() => setIsOpen(false)}
               >
-                <InstaIcon className="w-24 h-24 text-stone-200" />
+                <InstaIcon className="w-24 h-24 text-[#eae9ff]" />
               </a>
             </div>
           </BackgroundGradientAnimation>
