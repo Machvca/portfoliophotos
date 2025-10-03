@@ -97,14 +97,14 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-gradient-to-br from-terracota/15 via-terracota/30 to-terracota min-h-screen flex flex-col h-full">
-      <section className=" flex flex-col items-center text-md md:text-lg pt-18  md:pt-24 -mb-24 text-shadow-2xl ">
-        <p className="text-slate-950">Some kind words from my clients</p>
+    <main className="bg-gradient-to-br from-indigo-900/15 via-indigo-900/30 to-indigo-900 min-h-screen flex flex-col h-full">
+      <section className=" flex flex-col items-center text-md md:text-lg pt-36  md:pt-24  text-shadow-2xl ">
+        <p className="text-[#eae9ff]">Some kind words from my clients</p>
         <AnimatedTestimonials testimonials={testimonials} />
       </section>
       <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
-        <div className="w-full max-w-2xl bg-terracota/15 rounded-2xl shadow-2xl p-8  ">
-          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-terracota text-center">
+        <div className="w-full max-w-2xl bg-indigo-900/15 rounded-2xl shadow-2xl p-8  ">
+          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-indigo-900 text-center">
             Contact Me
           </h2>
           <p className="text-stone-950 text-xs md:text-base mb-8 text-center ">
