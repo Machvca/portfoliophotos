@@ -97,18 +97,18 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-gradient-to-br from-indigo-900/15 via-indigo-900/30 to-indigo-900 min-h-screen flex flex-col h-full">
-      <section className=" flex flex-col items-center text-md md:text-lg pt-36  md:pt-24  text-shadow-2xl ">
+    <main className="bg-gradient-to-br from-indigo-900/15 via-indigo-900/30 to-indigo-700 min-h-screen flex flex-col h-full">
+      <section className=" flex flex-col items-center text-lg md:text-lg pt-36  md:pt-24  text-shadow-2xl ">
         <p className="text-[#eae9ff]">Some kind words from my clients</p>
         <AnimatedTestimonials testimonials={testimonials} />
       </section>
       <section className="flex flex-col items-center justify-center px-4 mx-6 md:mx-0 py-32 md:px-8 -mt-10 md:-mt-0 animate-fade-in-up ">
-        <div className="w-full max-w-2xl bg-indigo-900/15 rounded-2xl shadow-2xl p-8  ">
-          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-indigo-900 text-center">
+        <div className="w-full max-w-2xl p-  ">
+          <h2 className="text-4xl md:text-7xl font-medium mb-6 text-stone-400 text-center">
             Contact Me
           </h2>
-          <p className="text-stone-950 text-xs md:text-base mb-8 text-center ">
-            Tell me a bit about the project you’d like to work on together – I’d
+          <p className="text-[#eae9ff] text-xs md:text-base mb-8 text-center ">
+            Tell me a bit about the project you’d like to work on together I’d
             love to hear your ideas!
           </p>
 
@@ -116,17 +116,15 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block mb-2 text-xs md:text-base font-medium text-stone-900"
-              >
-                Your Email
-              </label>
+                className="block mb-2 text-xs md:text-base font-medium text-[#eae9ff]"
+              ></label>
               <input
                 name="email"
                 type="email"
                 id="email"
                 required
-                placeholder="youremail@example.com"
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-stone-100 invalid:focus:ring-stone-200"
+                placeholder="Mail"
+                className="w-full p-4 text-xs md:text-base text-[#eae9ff] bg-[#eae9ff]/10 rounded-xl focus:outline-none  invalid:focus:ring-indigo-300"
                 onChange={handleInputChange}
               />
             </div>
@@ -134,17 +132,15 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="subject"
-                className="block mb-2 text-xs md:text-base font-medium text-stone-950"
-              >
-                Subject
-              </label>
+                className="block mb-2 text-xs md:text-base font-medium text-[#eae9ff]"
+              ></label>
               <input
                 name="subject"
                 type="text"
                 id="subject"
                 required
-                placeholder="Portraits, corporate event, etc."
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-200  invalid:focus:ring-red-950"
+                placeholder="Subject"
+                className="w-full p-4 text-xs md:text-base text-[#eae9ff] bg-[#eae9ff]/10  rounded-xl focus:outline-none    invalid:focus:ring-indigo-300"
                 onChange={handleInputChange}
               />
             </div>
@@ -152,17 +148,15 @@ export default function ContactPage() {
             <div>
               <label
                 htmlFor="message"
-                className="block mb-2 text-xs md:text-base font-medium text-stone-950"
-              >
-                Message
-              </label>
+                className="block mb-2 text-xs md:text-base font-medium text-[#eae9ff]"
+              ></label>
               <textarea
                 name="message"
                 id="message"
                 rows={6}
                 required
-                placeholder="Tell me about your event and preferred date/time..."
-                className="w-full p-4 text-xs md:text-base text-stone-950 border border-terracota rounded-xl focus:outline-none focus:ring-stone-100 focus:ring-2 focus:ring- invalid:focus:terracota"
+                placeholder="Message"
+                className="w-full p-4 text-xs md:text-base text-[#eae9ff] bg-[#eae9ff]/10  rounded-xl focus:outline-none    invalid:focus:ring-indigo-300"
                 onChange={handleInputChange}
               />
             </div>
@@ -170,10 +164,10 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={!isFormValid || loading}
-              className={`w-full font-medium py-3 rounded-xl transition duration-300 shadow-2xl flex items-center justify-center ${
+              className={`w-24 font-medium py-3 rounded-xl transition duration-300 shadow-2xl flex items-center justify-center ${
                 isFormValid && !loading
-                  ? "bg-terracota text-stone-100 cursor-pointer hover:scale-105"
-                  : "bg-terracota/20 text-terracota cursor-not-allowed opacity-50 border"
+                  ? "bg-indigo-900 text-[#eae9ff] cursor-pointer hover:scale-105"
+                  : "bg-stone-400 text-[#eae9ff] cursor-not-allowed opacity-50 "
               }`}
             >
               {loading ? (
@@ -198,7 +192,7 @@ export default function ContactPage() {
                   />
                 </svg>
               ) : null}
-              {loading ? "Sending..." : "Send Message"}
+              {loading ? "Sending..." : "Submit"}
             </button>
           </form>
         </div>
