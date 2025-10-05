@@ -54,7 +54,7 @@ export default function Navbar() {
       >
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className=" md:block hover:text-indigo-700 font-mono font-bold ">
+            <h1 className=" md:block hover:text-indigo-700 font-mono  ">
               Machuca
             </h1>
           </Link>
@@ -103,7 +103,7 @@ export default function Navbar() {
             className={`${isOpen ? "" : "pointer-events-none"}`}
           >
             {/* Enlaces centrados y clicables */}
-            <div className="relative mt-52 text-[#eae9ff] flex flex-col font-mono font-bold items-center justify-center gap-6 w-full text-center z-50">
+            <div className="relative mt-52 text-[#eae9ff] flex flex-col font-mono font-medium items-center justify-center gap-6 w-full text-center z-50">
               <Link
                 href="/about"
                 className="pointer-events-auto hover:text-[#eae9ff]"
