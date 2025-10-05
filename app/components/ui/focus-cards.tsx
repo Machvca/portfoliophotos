@@ -1,73 +1,3 @@
-// "use client";
-
-// import React, { useState } from "react";
-// import { cn } from "@/lib/utils";
-// import Image from "next/image";
-
-// export const Card = React.memo(
-//   ({
-//     card,
-//     index,
-//     hovered,
-//     setHovered,
-//   }: {
-//     card: Card;
-//     index: number;
-//     hovered: number | null;
-//     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
-//   }) => (
-//     <div
-//       onMouseEnter={() => setHovered(index)}
-//       onMouseLeave={() => setHovered(null)}
-//       className={cn(
-//         "rounded-lg relative bg-gray-900 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-//         hovered !== null &&
-//           hovered !== index &&
-//           "blur-sm scale-[0.98] scale-105"
-//       )}
-//     >
-//       <Image
-//         src={card.src}
-//         alt={card.title}
-//         width={800} // o lo que sea apropiado para tu diseño
-//         height={600}
-//         className="object-cover absolute inset-0"
-//       />
-//       <div
-//         className={cn(
-//           "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
-//           hovered === index ? "opacity-0" : "opacity-100 "
-//         )}
-//       ></div>
-//     </div>
-//   )
-// );
-
-// Card.displayName = "Card";
-
-// type Card = {
-//   title: string;
-//   src: string;
-// };
-
-// export function FocusCards({ cards }: { cards: Card[] }) {
-//   const [hovered, setHovered] = useState<number | null>(null);
-
-//   return (
-//     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mt-36 px-8 md:mx-auto md:px-8 w-full mb-16 ">
-//       {cards.map((card, index) => (
-//         <Card
-//           key={card.title}
-//           card={card}
-//           index={index}
-//           hovered={hovered}
-//           setHovered={setHovered}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-
 "use client";
 
 import React, { useState, useCallback, useEffect } from "react";
@@ -141,7 +71,9 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
               alt={card.title}
               width={800}
               height={600}
-              className="object-cover absolute inset-0 loading='lazy' unoptimized"
+              loading="lazy"
+              unoptimized
+              className="object-cover absolute inset-0"
             />
             <div
               className={cn(
@@ -177,13 +109,14 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
                 alt="Expanded"
                 width={1200}
                 height={1200}
-                className="max-w-full max-h-screen object-contain loading='lazy' unoptimized"
-  
+                loading="lazy"
+                unoptimized
+                className="max-w-full max-h-screen object-contain "
               />
             </motion.div>
 
             <div
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-terracota/70 hover:text-terracota cursor-pointer z-50"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-terracota/70 hover:text-indigo-900 cursor-pointer z-50"
               onClick={(e) => {
                 e.stopPropagation();
                 goToPreviousImage();
