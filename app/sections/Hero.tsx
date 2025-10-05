@@ -4,7 +4,7 @@ import { cn } from "../../lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import mainportrait from "../../assets/images/mainportrait.webp";
-import sh12 from "../../assets/images/sh12.webp";
+import sh12 from "../../public/images/sh12.webp";
 import milan2 from "../../public/images/milan2.webp";
 import mainlatest from "../../assets/images/mainlatest.webp";
 import { ContainerTextFlip } from "../components/ui/container-text-flip";
@@ -39,7 +39,7 @@ export function Hero() {
       <div
         className={cn(
           "absolute inset-0 h-full",
-          "bg-size-[180px_180px]",
+          "bg-size-[80px_80px]",
           "bg-[linear-gradient(to_right,#312c85_1px,transparent_1px),linear-gradient(to_bottom,#312c85_1px,transparent_1px)]"
         )}
       />
@@ -47,7 +47,7 @@ export function Hero() {
         {/* Texto principal */}
         <div className="min-h-[50vh] relative w-full justify-center md:-mt-136">
           <div className="absolute inset-0 w-full h-full z-10 mask-[radial-gradient(transparent,white)] pointer-events-none" />
-          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0   mt-28 z-20 font-mono font-bold text-xl md:text-3xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-[#eae9ff] to-[#eae9ff]">
+          <div className="grid mb-32 animate-pulse-fade-in animate-duration-900 delay-800 md:mb-0 mt-28 z-20 font-mono font-bold text-xl md:text-3xl lg:text-5xl xl:text-6xl pointer-events-none md:items-start text-center md:text-left mx-auto bg-clip-text text-transparent bg-linear-to-r/srgb from-[#eae9ff] to-[#eae9ff]">
             <h1>
               Hi there! <br /> I&apos;m Jorge Machuca I&apos;m a <br />
               <ContainerTextFlip /> {""}
@@ -69,7 +69,7 @@ export function Hero() {
                   className={cn(
                     "group relative cursor-pointer overflow-hidden rounded-2xl",
                     "transform transition duration-500 hover:scale-105 hover:opacity-100",
-                    "filter drop-shadow-[0_25px_25px_#eae9ff]",
+                    "filter ",
                     "hover:mask-t-from-99 hover:mask-b-from-99"
                   )}
                 >
@@ -85,17 +85,18 @@ export function Hero() {
                       "group-hover:scale-125"
                     )}
                   />
-                  <p
+                  <h1
                     className={cn(
-                      "absolute bottom-1 md:bottom-10  text-xs md:text-3xl font-medium text-slate-300 ",
+                      "absolute bottom-0 md:bottom-10 left-1/2 -translate-x-1/2", // 👈 centrado horizontal
+                      "text-sm md:text-3xl font-medium  text-slate-200",
+                      "bg-indigo-900/60 px-4 py-2 rounded-md",
                       "transition-all duration-500",
-                      "",
-                      "md:bg-none ",
+                      "md:bg-none",
                       "opacity-100 md:opacity-0 md:group-hover:opacity-100"
                     )}
                   >
                     {name}
-                  </p>
+                  </h1>
                 </motion.div>
               </Link>
             ))}
