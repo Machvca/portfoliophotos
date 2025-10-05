@@ -141,11 +141,11 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
               alt={card.title}
               width={800}
               height={600}
-              className="object-cover absolute inset-0"
+              className="object-cover absolute inset-0 loading='lazy' unoptimized"
             />
             <div
               className={cn(
-                "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
+                "absolute inset-0 bg-black/30 flex items-end py-8 px-4 transition-opacity duration-300",
                 hovered === index ? "opacity-0" : "opacity-100"
               )}
             />
@@ -177,7 +177,8 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
                 alt="Expanded"
                 width={1200}
                 height={1200}
-                className="max-w-full max-h-screen object-contain"
+                className="max-w-full max-h-screen object-contain loading='lazy' unoptimized"
+  
               />
             </motion.div>
 
