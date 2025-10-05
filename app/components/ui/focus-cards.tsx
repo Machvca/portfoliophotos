@@ -63,7 +63,7 @@ export function FocusCards({ cards }: { cards: CardData[] }) {
             onClick={() => selectImage(index)}
             className={cn(
               "rounded-lg relative bg-gray-900 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out cursor-pointer",
-              hovered !== null && hovered !== index && "blur-sm scale-[0.99]"
+              hovered !== null && hovered !== index && "lg:blur-sm scale-[0.99]"
             )}
           >
             <Image

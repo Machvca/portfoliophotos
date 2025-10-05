@@ -68,7 +68,7 @@ export default function Navbar() {
           </button>
 
           {/* Menú de escritorio */}
-          <div className="hidden md:flex space-x-6 font-mono font-bold">
+          <div className="hidden md:flex space-x-6 font-mono font-medium">
             <Link
               href="/about"
               className=" hover:shadow-2xl hover:shadow-stone-950 hover:text-stone-950"
