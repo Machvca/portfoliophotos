@@ -26,7 +26,8 @@
   --color-azul-profundo: #013220;
 
   /* fonts */
-  --font-roboto: var(--font-roboto);
+  /* --font-roboto: var(--font-roboto); */
+  --font-space-mono: var(--font-space-mono);
 
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
 
