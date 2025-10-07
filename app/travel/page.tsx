@@ -7,6 +7,7 @@ import viena1 from "../../public/images/viena1.webp";
 import tul3 from "../../public/images/tul3.webp";
 import cop2 from "../../public/images/cop2.webp";
 import bar5 from "../../public/images/bar5.webp";
+import norway1 from "../../public/images/norway1.webp";
 
 export default function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -27,6 +28,12 @@ export default function AppleCardsCarouselDemo() {
 }
 
 const data = [
+  {
+    category: "Norway",
+    title: "Norway",
+    src: norway1,
+    link: "/norway",
+  },
   {
     category: "Italy",
     title: "Milan",
@@ -58,5 +65,4 @@ const data = [
     src: bar5,
     link: "/barcelona",
   },
- 
 ];
