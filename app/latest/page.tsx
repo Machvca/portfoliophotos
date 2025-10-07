@@ -44,7 +44,12 @@ export default function CarouselDemo() {
   ];
   return (
     <>
-      <div className="relative overflow-hidden w-full h-full py-60">
+      <div className="relative flex flex-col items-center justify-center overflow-hidden w-full h-full py-40">
+        <p className="text-indigo-200 text-center p-12">
+          {" "}
+          Had the pleasure of shooting once again with the amazing @andrealove
+          at @thehoxtonhotel in Barcelona last month. Such a fun one!
+        </p>
         <Carousel slides={slideData} />
       </div>
     </>

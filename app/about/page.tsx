@@ -33,7 +33,7 @@ function Page() {
             to capture authentic moments and real personality.
             <br />
             Inspired now by Norway’s light and landscapes, I’m excited to bring
-            that atmosphere into my work.
+            that atmosphere into my photography.
           </p>
         </motion.div>
 
