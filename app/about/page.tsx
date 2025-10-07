@@ -15,10 +15,10 @@ function Page() {
           transition={{ delay: 0.4, duration: 1, ease: "easeInOut" }}
           className="w-full md:w-1/2 text-left"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-8xl font-mono text-[#eae9ff]">
+          <h1 className="text-4xl md:text-5xl lg:text-8xl  text-indigo-300">
             ABOUT ME
           </h1>
-          <p className="text-sm md:text-base lg:text-lg mt-6 text-[#eae9ff] font-mono leading-relaxed">
+          <p className="text-sm md:text-base lg:text-lg mt-6 text-[#eae9ff]  leading-relaxed">
             I’m a photographer from southern Mexico, living in Barcelona since
             2016.
             <br />
