@@ -1,7 +1,7 @@
 "use client";
 
 import { Carousel, Card } from "../components/ui/apple-cards-carousel";
-import { BackgroundLines } from "../components/ui/background-lines";
+
 import milan3 from "../../public/images/milan3.webp";
 import viena1 from "../../public/images/viena1.webp";
 import tul3 from "../../public/images/tul3.webp";
@@ -15,15 +15,13 @@ export default function AppleCardsCarouselDemo() {
   ));
 
   return (
-    <section className="bg-transparent font-mono px-4 mb-112 md:mb-14">
-      <BackgroundLines className="flex items-center justify-center w-full flex-col  px-4 bg-transparent">
-        <div className="w-full h-full py-15  mt-12 ">
-          <h2 className="max-w-xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-terracota  ">
-            Some of the photos from my last trips
-          </h2>
-          <Carousel items={cards} />
-        </div>
-      </BackgroundLines>
+    <section className="bg-transparent  px-4 mb-112 md:mb-14">
+      <div className="w-full h-full py-15  mt-12 ">
+        <h2 className="max-w-xl pl-4 mx-auto text-2xl md:text-5xl font-bold text-[#eae9ff]  ">
+          Some of the photos from my last trips
+        </h2>
+        <Carousel items={cards} />
+      </div>
     </section>
   );
 }

@@ -54,7 +54,7 @@ export default function Navbar() {
       >
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-4 py-4 flex justify-between items-center">
           <Link href="/">
-            <h1 className=" md:block hover:text-indigo-700 font-mono  ">
+            <h1 className=" md:block hover:text-indigo-700 ">
               Machuca
             </h1>
           </Link>

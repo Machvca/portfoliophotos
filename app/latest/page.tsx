@@ -45,10 +45,26 @@ export default function CarouselDemo() {
   return (
     <>
       <div className="relative flex flex-col items-center justify-center overflow-hidden w-full h-full py-40">
-        <p className="text-indigo-200 text-center p-12">
+        <p className="text-indigo-200 text-center text-sm p-6">
           {" "}
-          Had the pleasure of shooting once again with the amazing @andrealove
-          at @thehoxtonhotel in Barcelona last month. Such a fun one!
+          Had the pleasure of shooting once again with the amazing{" "}
+          <a
+            href="https://www.instagram.com/andreaaalove_/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @andreaaalove_
+          </a>{" "}
+          at{" "}
+          <a
+            href="https://www.instagram.com/thehoxtonhotel/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {" "}
+            @thehoxtonhotel{" "}
+          </a>
+          in Barcelona last month. Such a fun one!
         </p>
         <Carousel slides={slideData} />
       </div>

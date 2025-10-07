@@ -87,8 +87,8 @@ export function Hero() {
                   />
                   <h1
                     className={cn(
-                      "absolute bottom-0 md:bottom-10 left-1/2 -translate-x-1/2", // 👈 centrado horizontal
-                      "text-sm md:text-3xl font-medium  text-slate-200",
+                      "absolute bottom-0 md:bottom-10 left-1/2 -translate-x-1/2", //
+                      "text-sm md:text-3xl font-medium  text-[#eae9ff]",
                       "bg-indigo-900/60 px-4 py-2 rounded-md",
                       "transition-all duration-500",
                       "md:bg-none",

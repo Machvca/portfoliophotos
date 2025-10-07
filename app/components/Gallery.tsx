@@ -73,7 +73,7 @@ const Gallery = ({
   return (
     <div className="min-h-screen mx-8 md:mx-52 py-20 md:py-32 ">
       {/* Photo Grid */}
-      <h1 className=" font-bold text-5xl md:text-7xl text-verde-oliva text-right my-12">
+      <h1 className=" font-bold text-5xl md:text-7xl text-[#eae9ff] text-right my-12">
         {" "}
         {cityName}{" "}
       </h1>
@@ -101,7 +101,7 @@ const Gallery = ({
       <div className="flex justify-between items-center px-4 md:px-8">
         <Link
           href={previousHref}
-          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-stone-950 hover:text-terracota "
+          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-[#eae9ff] "
         >
           <span className="text-3xl md:text-4xl ">‹</span>
           <span className="font-medium text-xs md:text-xl ">
@@ -111,7 +111,7 @@ const Gallery = ({
 
         <Link
           href={nextHref}
-          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-stone-950 hover:text-terracota "
+          className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-[#eae9ff] "
         >
           <span className="font-medium text-xs md:text-xl ">
             {nextCityName}
@@ -125,7 +125,7 @@ const Gallery = ({
         {lightboxIndex !== null && (
           <motion.div
             ref={lightboxRef}
-            className="fixed inset-0 z-[999] flex items-center justify-center bg-terracota/30 backdrop-blur cursor-zoom-out"
+            className="fixed inset-0 z-[999] flex items-center justify-center bg-[#eae9ff] backdrop-blur cursor-zoom-out"
             onClick={() => setLightboxIndex(null)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
