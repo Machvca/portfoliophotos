@@ -102,6 +102,11 @@ import portrait14 from "../../assets/images/mainlatest.webp";
 import portrait15 from "../../assets/images/latest2.webp";
 import portrait16 from "../../assets/images/latest4.webp";
 import portrait17 from "../../assets/images/portrait17.webp";
+import portrait18 from "../../assets/images/portrait18.webp";
+import portrait19 from "../../assets/images/portrait19.webp";
+import portrait20 from "../../assets/images/portrait20.webp";
+
+
 
 const portraitImages = [
   portrait1,
@@ -121,6 +126,10 @@ const portraitImages = [
   portrait15,
   portrait16,
   portrait17,
+  portrait18,
+  portrait19,
+  portrait20,
+
 ];
 
 export default function DraggableCardDemo() {
